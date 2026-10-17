@@ -1,0 +1,42 @@
+{
+  "slug": "impressum",
+  "titel": "Impressum",
+  "einleitung": "Diese Website ist eine Verkaufs-Demo. Sie zeigt, wie ein neuer Webauftritt von New York Nails Schlieren aussehen könnte, und ist nicht die offizielle Website des Studios.",
+  "stand": "16. Oktober 2026",
+  "bloecke": [
+    {
+      "titel": "Betreiber dieser Demo"
+    },
+    "**Nick Holzbecher**, Entwicklung von Websites für kleine Unternehmen. Die Postanschrift wird auf Anfrage mitgeteilt.",
+    "E-Mail: [holzbechernick@gmail.com](mailto:holzbechernick@gmail.com)",
+    "Verantwortlich für Gestaltung, Technik und die Zusammenstellung der Inhalte dieser Demo. Die Demo wurde ohne Auftrag des Studios erstellt und wird dem Studio als Vorschlag vorgelegt.",
+    {
+      "titel": "Dargestelltes Studio"
+    },
+    "**New York Nails Schlieren**, Ringstrasse 1, 8952 Schlieren. Telefon [044 557 50 67](tel:+41445575067), E-Mail [info@newyorknails-schlieren.ch](mailto:info@newyorknails-schlieren.ch).",
+    "Diese Angaben stammen von der bestehenden Website des Studios und von seiner Buchungsseite. Rechtsform, Inhaberin oder Inhaber und Unternehmens-Identifikationsnummer sind in den öffentlichen Registern unter diesem Namen für Schlieren nicht zu finden und werden hier deshalb nicht genannt. Für den Produktivbetrieb ergänzt das Studio diese Angaben.",
+    {
+      "titel": "Inhalte und Preise"
+    },
+    "Leistungen, Preise, Behandlungsdauern und Öffnungszeiten wurden am 16. Oktober 2026 von der Buchungsseite des Studios bei Beauty Booking übernommen. Massgebend sind die Angaben des Studios und der Buchungsseite. Diese Website und die Buchungsplattform sind getrennte Systeme: Änderungen auf der einen Seite erscheinen nicht automatisch auf der anderen.",
+    "Die Website nimmt keine Buchungen entgegen. Termine werden ausschliesslich beim externen Buchungsdienst Beauty Booking (Lumxi GmbH) oder telefonisch vereinbart.",
+    {
+      "titel": "Marken und Logos"
+    },
+    "Die Wortmarke «New York Nails» und das Signet gehören New York Nails Schlieren. Sie werden in dieser Demo unverändert und vorbehaltlich der Freigabe durch das Studio gezeigt.",
+    {
+      "titel": "Bildnachweis"
+    },
+    "Die Demo verwendet ausser Wortmarke, Signet und einem daraus erzeugten Vorschaubild keine Bilder. Insbesondere stammen keine Fotos aus Google Maps, Instagram oder Facebook. Die Bildquellen stehen unter dieser Überschrift; helle und dunkle Fassungen derselben Datei sind dort einmal aufgeführt.",
+    {
+      "titel": "Haftung"
+    },
+    "Die Inhalte wurden mit Sorgfalt zusammengestellt. Für Richtigkeit, Vollständigkeit und Aktualität wird keine Gewähr übernommen. Links zu externen Websites (Buchung, Google Maps, Instagram, Facebook) führen zu Angeboten Dritter, für deren Inhalte die jeweiligen Betreiber verantwortlich sind.",
+    {
+      "titel": "Technik"
+    },
+    "Die Demo ist eine statische Website und wird über GitHub Pages ausgeliefert (GitHub, Inc., San Francisco, USA). Sie ist für Suchmaschinen gesperrt (noindex) und als Entwurf gekennzeichnet."
+  ],
+  "seoTitel": "Impressum",
+  "seoBeschreibung": "Impressum der Verkaufs-Demo für New York Nails Schlieren: Betreiber der Demo, dargestelltes Studio, Quellen der Inhalte, Marken und Bildnachweis."
+}

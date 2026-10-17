@@ -1,0 +1,51 @@
+{
+  "slug": "datenschutz",
+  "titel": "Datenschutzerklärung",
+  "einleitung": "Diese Erklärung beschreibt, was beim Besuch dieser Demo-Website tatsächlich geschieht. Kurz: Die Website setzt keine Cookies, speichert nichts in Ihrem Browser und bindet keine Dienste Dritter ein. Externe Angebote öffnen sich erst, wenn Sie einen Link anklicken.",
+  "stand": "16. Oktober 2026",
+  "bloecke": [
+    {
+      "titel": "Verantwortliche Person"
+    },
+    "Verantwortlich für die Datenbearbeitung auf dieser Demo-Website ist Nick Holzbecher, E-Mail [holzbechernick@gmail.com](mailto:holzbechernick@gmail.com). Die Postanschrift wird auf Anfrage mitgeteilt. New York Nails Schlieren betreibt diese Demo nicht und bearbeitet über sie keine Daten.",
+    "Es gilt das Schweizer Datenschutzgesetz (DSG, SR 235.1). Diese Erklärung erfüllt die Informationspflicht nach Artikel 19 DSG. Sie wurde ohne anwaltliche Prüfung erstellt.",
+    {
+      "titel": "Aufruf der Website (Hosting)"
+    },
+    "Die Website wird als statische Dateien über **GitHub Pages** ausgeliefert, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf übermittelt Ihr Browser technisch bedingt Ihre IP-Adresse, die aufgerufene Adresse, Datum und Uhrzeit sowie Angaben zu Browser und Betriebssystem an die Server von GitHub. GitHub kann diese Angaben in Protokollen speichern, um den Dienst sicher zu betreiben und gesetzliche Pflichten zu erfüllen.",
+    "Dabei gelangen Daten in die USA. Für die Übermittlung stützt sich der Betreiber dieser Demo auf die Datenschutzbestimmungen von GitHub und, soweit GitHub dort zertifiziert ist, auf das Swiss-U.S. Data Privacy Framework. Massgebend ist die aktuelle [Datenschutzerklärung von GitHub](https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement). Der Betreiber dieser Demo hat keinen Zugriff auf diese Protokolle und wertet sie nicht aus.",
+    {
+      "titel": "Keine Cookies, keine Speicherung im Browser"
+    },
+    "Die Website setzt keine Cookies und schreibt nichts in den lokalen Speicher Ihres Browsers. Es gibt keine Analyse-Werkzeuge, keine Werbe-Tags und keine Schriftarten von fremden Servern; die Schriften werden mit der Website ausgeliefert. Deshalb erscheint auch kein Cookie-Banner.",
+    "Der Link «Datenschutz-Einstellungen» in der Fusszeile öffnet nur einen Hinweis. Sollte die Website später Dienste einbinden, die eine Einwilligung brauchen (zum Beispiel eine eingebettete Karte), würde an dieser Stelle eine echte Auswahl erscheinen, und diese Erklärung würde angepasst.",
+    {
+      "titel": "Externe Links: Buchung, Karte, 360°-Ansicht, Social Media"
+    },
+    "Beim blossen Aufruf dieser Website werden keine Daten an die folgenden Anbieter übermittelt. Erst wenn Sie einen entsprechenden Link anklicken, verlassen Sie diese Website, und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters:",
+    {
+      "liste": [
+        "**Terminbuchung** bei Beauty Booking, einem Dienst der Lumxi GmbH (beprobooking.com). Die Buchung, die Erfassung Ihrer Kontaktdaten und die Terminbestätigung finden vollständig dort statt. Diese Website erfährt nichts davon.",
+        "**Route und 360°-Ansicht** bei Google Maps (Google Ireland Limited, Dublin, Irland; Google LLC, USA).",
+        "**Instagram** und **Facebook** (Meta Platforms Ireland Limited, Dublin, Irland).",
+        "**Telefon- und E-Mail-Links** öffnen Ihr Telefon- beziehungsweise E-Mail-Programm."
+      ]
+    },
+    "Es werden keine Karten, Videos oder Social-Media-Inhalte in diese Website eingebettet.",
+    {
+      "titel": "Kontaktformular (E-Mail vorbereiten)"
+    },
+    "Das Kontaktformular sendet nichts an einen Server. Der Knopf «E-Mail vorbereiten» erzeugt aus Ihren Eingaben eine E-Mail und öffnet sie in Ihrem eigenen E-Mail-Programm. Erst wenn Sie die E-Mail dort absenden, gelangen Ihre Angaben an das Studio (info@newyorknails-schlieren.ch). Diese Website speichert und protokolliert Ihre Eingaben nicht. Bitte schreiben Sie keine Gesundheitsangaben in die Nachricht.",
+    "Solange diese Website eine Demo ist, sollten Sie das Formular nicht für echte Anfragen nutzen. Wenden Sie sich direkt an das Studio.",
+    {
+      "titel": "Ihre Rechte"
+    },
+    "Sie haben das Recht auf Auskunft über die Daten, die über Sie bearbeitet werden (Artikel 25 DSG), sowie auf Berichtigung, Löschung und Herausgabe. Da diese Website selbst keine Personendaten speichert, richten sich Anfragen zu Protokolldaten an GitHub und Anfragen zu Buchungen an das Studio beziehungsweise an Beauty Booking. Für Fragen zu dieser Demo erreichen Sie den Betreiber per E-Mail. Aufsichtsbehörde ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB).",
+    {
+      "titel": "Änderungen"
+    },
+    "Diese Erklärung beschreibt den Stand der Demo. Wird die Website produktiv betrieben, zum Beispiel mit anderem Hosting oder einem Redaktionssystem, wird sie vor der Veröffentlichung angepasst."
+  ],
+  "seoTitel": "Datenschutzerklärung",
+  "seoBeschreibung": "Datenschutzerklärung der Demo-Website für New York Nails Schlieren: Hosting über GitHub Pages, keine Cookies, nur externe Links, Kontakt per vorbereiteter E-Mail."
+}

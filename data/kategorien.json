@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "naegel",
+    "titel": "Nägel",
+    "originalName": "NAILS & MORE",
+    "kurz": "Neues Set, Auffüllen, Maniküre, Pediküre, Shellack und Entfernen.",
+    "einleitung": "Gelmodellage als neues Set oder zum Auffüllen, klassische Hand- und Fusspflege, Shellack für Finger- oder Zehennägel sowie das Entfernen. Jede Position lässt sich einzeln online buchen.",
+    "seoTitel": "Nägel: Modellage, Maniküre, Pediküre",
+    "seoBeschreibung": "Preise und Dauer für Nagelmodellage, Auffüllen, Maniküre, Pediküre und Shellack bei New York Nails in Schlieren. Online buchbar.",
+    "reihenfolge": 10,
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Bereiche und Positionen)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo"
+  },
+  {
+    "slug": "wimpern",
+    "titel": "Wimpern",
+    "originalName": "WIMPERNVERLÄNGERUNG (EYELASHES Extensions)",
+    "kurz": "Wimpernverlängerung Classic, Mascara, Volumen und Extra Volumen, Auffüllen, Lifting und Entfernen.",
+    "einleitung": "Wimpernverlängerung in vier Ausführungen, das Auffüllen nach drei bis vier Wochen, Wimpern-Lifting der eigenen Wimpern und das fachgerechte Entfernen.",
+    "seoTitel": "Wimpern: Verlängerung, Auffüllen, Lifting",
+    "seoBeschreibung": "Wimpernverlängerung Classic, Mascara, Volumen und Extra Volumen, Auffüllen und Wimpern-Lifting bei New York Nails in Schlieren. Preise und Dauer.",
+    "reihenfolge": 20,
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Bereiche und Positionen)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo"
+  },
+  {
+    "slug": "waxing",
+    "titel": "Waxing",
+    "originalName": "WAXING",
+    "kurz": "Haarentfernung mit Wachs: Augenbrauen, Achseln, Bikinizone und Beine.",
+    "einleitung": "Haarentfernung mit Wachs für Augenbrauen, Achseln, die Bikinizone und die kompletten Beine.",
+    "seoTitel": "Waxing: Augenbrauen, Achseln, Bikini, Beine",
+    "seoBeschreibung": "Waxing für Augenbrauen, Achseln, Bikinizone und Beine bei New York Nails in Schlieren. Preise und Dauer, online buchbar.",
+    "reihenfolge": 30,
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Bereiche und Positionen)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo"
+  },
+  {
+    "slug": "massage",
+    "titel": "Massage",
+    "originalName": "Massage",
+    "kurz": "Kopfmassage in zwei Längen sowie Gesichtsmassage mit Maske.",
+    "einleitung": "Kopfmassage mit 30 oder 60 Minuten sowie eine kurze Gesichtsmassage mit Maske, zum Beispiel als Ergänzung zur Pediküre.",
+    "seoTitel": "Massage: Kopfmassage und Gesichtsmassage",
+    "seoBeschreibung": "Kopfmassage mit 30 oder 60 Minuten und Gesichtsmassage mit Maske bei New York Nails in Schlieren. Preise und Dauer.",
+    "reihenfolge": 40,
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Bereiche und Positionen)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo"
+  }
+]

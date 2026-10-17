@@ -1,0 +1,74 @@
+{
+  "logo-wortmarke": {
+    "datei": "bepro-teaser-1631d41b.png",
+    "art": "logo",
+    "breiten": [
+      338,
+      676
+    ],
+    "alt": "New York Nails, Nails, Lashes & Beauty Care",
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "New York Nails Schlieren",
+      "titel": "Wortmarke «New York Nails, Nails, Lashes & Beauty Care»",
+      "quelle": "https://beprobooking.com/images/teasers/1631d41b-e8b2-4e90-9734-1883a7c730cd-teaser.png (Buchungsseite des Studios)",
+      "lizenz": "Marke und Logo von New York Nails Schlieren, Nutzung in der Demo vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Form und Farbe unverändert; transparenter Hintergrund beibehalten, verlustfrei als WebP gespeichert"
+  },
+  "logo-signet": {
+    "datei": "bepro-teaser-267caca3.png",
+    "art": "logo",
+    "breiten": [
+      283,
+      566
+    ],
+    "alt": "Signet von New York Nails: ein grosses N mit dem Schriftzug Nails, Lashes & Beauty Care",
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "New York Nails Schlieren",
+      "titel": "Signet «N, Nails, Lashes & Beauty care»",
+      "quelle": "https://beprobooking.com/images/teasers/267caca3-a4d4-409e-a44c-e8b15fe83f42-teaser.png (Buchungsseite des Studios)",
+      "lizenz": "Marke und Logo von New York Nails Schlieren, Nutzung in der Demo vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Form und Farbe unverändert; der weisse Grund des Originals wurde transparent gesetzt, verlustfrei als WebP gespeichert"
+  },
+  "logo-wortmarke-weiss": {
+    "datei": "bepro-teaser-1631d41b.png",
+    "art": "logo-negativ",
+    "breiten": [
+      338,
+      676
+    ],
+    "alt": "New York Nails, Nails, Lashes & Beauty Care",
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "New York Nails Schlieren",
+      "titel": "Wortmarke, Negativfassung für dunklen Grund",
+      "quelle": "https://beprobooking.com/images/teasers/1631d41b-e8b2-4e90-9734-1883a7c730cd-teaser.png (Buchungsseite des Studios)",
+      "lizenz": "Marke und Logo von New York Nails Schlieren, Nutzung in der Demo vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Negativfassung: Form unverändert, Schwarz durch Weiss ersetzt (so zeigt das Studio die Wortmarke selbst auf dunklem Grund); transparenter Hintergrund, verlustfrei als WebP"
+  },
+  "logo-signet-weiss": {
+    "datei": "bepro-teaser-267caca3.png",
+    "art": "logo-negativ",
+    "breiten": [
+      283,
+      566
+    ],
+    "alt": "Signet von New York Nails: ein grosses N mit dem Schriftzug Nails, Lashes & Beauty Care",
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "New York Nails Schlieren",
+      "titel": "Signet, Negativfassung für dunklen Grund",
+      "quelle": "https://beprobooking.com/images/teasers/267caca3-a4d4-409e-a44c-e8b15fe83f42-teaser.png (Buchungsseite des Studios)",
+      "lizenz": "Marke und Logo von New York Nails Schlieren, Nutzung in der Demo vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Negativfassung: Form unverändert, Dunkelgrau durch Weiss ersetzt; transparenter Hintergrund, verlustfrei als WebP"
+  }
+}

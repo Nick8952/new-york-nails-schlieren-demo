@@ -1,0 +1,720 @@
+[
+  {
+    "slug": "neues-set",
+    "kategorie": "naegel",
+    "titel": "Neues Set",
+    "titelEn": "New Set",
+    "beschreibung": "Gelmodellage von Grund auf, mit Verlängerung. Der Preis richtet sich nach der gewählten Ausführung.",
+    "varianten": [
+      {
+        "_key": "natur",
+        "titel": "Natur, inklusive Verlängerung",
+        "originalName": "Neuset Natur",
+        "preis": {
+          "chf": 80,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "Inkl. Verlängerung -preisabweichung je Bedarf"
+      },
+      {
+        "_key": "farbe",
+        "titel": "Verlängerung mit Farbe, Glitzer oder French",
+        "originalName": "NeuSet ( New Set)",
+        "preis": {
+          "chf": 85,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "Verlängerung /Farbe/ Glitzer/ French preisabweichung je Bedarf"
+      },
+      {
+        "_key": "ombre",
+        "titel": "Ombre oder Babyboomer",
+        "originalName": "NeuSet ( New Set)",
+        "preis": {
+          "chf": 95,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "Ombre/Babyboom preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 10
+  },
+  {
+    "slug": "auffuellen",
+    "kategorie": "naegel",
+    "titel": "Auffüllen",
+    "titelEn": "Refill",
+    "beschreibung": "Nachfüllen der herausgewachsenen Modellage. Der Preis richtet sich nach der gewählten Ausführung.",
+    "varianten": [
+      {
+        "_key": "natur",
+        "titel": "Natur, ohne Verlängerung",
+        "originalName": "Auffüllen Natur",
+        "preis": {
+          "chf": 70,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "keine Verlängerung- preisabweichung je Bedarf"
+      },
+      {
+        "_key": "farbe",
+        "titel": "Mit Farbe",
+        "originalName": "Auffüllen (Refill)",
+        "preis": {
+          "chf": 75,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "Farbe -preisabweichung je Bedarf"
+      },
+      {
+        "_key": "french",
+        "titel": "French oder Glitzer",
+        "originalName": "Auffüllen (Refill)",
+        "preis": {
+          "chf": 80,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "French / Glitzer -preisabweichung je Bedarf"
+      },
+      {
+        "_key": "ombre",
+        "titel": "Ombre oder Babyboomer",
+        "originalName": "Auffüllen (Refill)",
+        "preis": {
+          "chf": 85,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "Ombre / Babyboom -preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 20
+  },
+  {
+    "slug": "manikuere",
+    "kategorie": "naegel",
+    "titel": "Maniküre",
+    "titelEn": "Classic Manicure",
+    "beschreibung": "Klassische Handpflege für Frau und Mann.",
+    "varianten": [
+      {
+        "_key": "classic",
+        "titel": "Klassische Maniküre",
+        "originalName": "Maniküre ( classic manicure)",
+        "preis": {
+          "chf": 35,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 30,
+        "originalBeschreibung": "Handpflege Mann /Frau"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 30
+  },
+  {
+    "slug": "shellack",
+    "kategorie": "naegel",
+    "titel": "Shellack",
+    "titelEn": "Gel Color",
+    "beschreibung": "Gelfarbe (Gel Color) auf den Natur-Nägeln, für Fingernägel oder Fusszehen.",
+    "varianten": [
+      {
+        "_key": "farbe",
+        "titel": "Fingernägel oder Fusszehen",
+        "originalName": "Shellack ( Gel Color)",
+        "preis": {
+          "chf": 45,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 30,
+        "originalBeschreibung": "Fingernagel oder Fusszehen -preisabweichung je Bedarf"
+      },
+      {
+        "_key": "french",
+        "titel": "French oder Glitzer",
+        "originalName": "Shellack",
+        "preis": {
+          "chf": 50,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "French/Glitzer- preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 40
+  },
+  {
+    "slug": "pedikuere",
+    "kategorie": "naegel",
+    "titel": "Pediküre",
+    "titelEn": "Classic Pedicure",
+    "beschreibung": "Klassische Fusspflege für Frau und Mann, auf Wunsch mit Normallack oder mit Gelfarbe.",
+    "varianten": [
+      {
+        "_key": "classic",
+        "titel": "Klassische Pediküre",
+        "originalName": "Pediküre  ( Classic Pedicure)",
+        "preis": {
+          "chf": 55,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 30,
+        "originalBeschreibung": "Fusspflege Mann/Frau"
+      },
+      {
+        "_key": "lack",
+        "titel": "Mit Normallack, ohne Gelfarbe",
+        "originalName": "Pediküre mit Normal Lack",
+        "preis": {
+          "chf": 75,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 75,
+        "originalBeschreibung": "Ohne Gel-Farbe -preisabweichung je Bedarf"
+      },
+      {
+        "_key": "farbe",
+        "titel": "Mit Farbe (Complete)",
+        "originalName": "Pediküre mit Farbe",
+        "preis": {
+          "chf": 85,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "Complete- preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 50
+  },
+  {
+    "slug": "zehennagel-modellage",
+    "kategorie": "naegel",
+    "titel": "Zehennagel-Modellage",
+    "beschreibung": "Gelmodellage der Zehennägel.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Zehennagel-Modellage",
+        "originalName": "Zehnagel-Modellage",
+        "preis": {
+          "chf": 90,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 60
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 60
+  },
+  {
+    "slug": "entfernen",
+    "kategorie": "naegel",
+    "titel": "Entfernen",
+    "titelEn": "Remove",
+    "beschreibung": "Fachgerechtes Entfernen der Modellage oder von Shellack.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Modellage entfernen",
+        "originalName": "Entfernen ( Remove )",
+        "preis": {
+          "chf": 30,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 15,
+        "originalBeschreibung": "Bei Schellack chf 20"
+      }
+    ],
+    "hinweise": [
+      "Bei Shellack CHF 20."
+    ],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 70
+  },
+  {
+    "slug": "korrektur",
+    "kategorie": "naegel",
+    "titel": "Fingernagel-Korrektur",
+    "titelEn": "Correction",
+    "beschreibung": "Reparatur eines einzelnen Nagels. Der Preis gilt ab einem Nagel.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Korrektur",
+        "originalName": "Fingernagel Korrektur (Correction)",
+        "preis": {
+          "chf": 10,
+          "ab": true,
+          "abweichung": false
+        },
+        "dauerMinuten": 15,
+        "originalBeschreibung": "Preis Ab"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 80
+  },
+  {
+    "slug": "wimpernverlaengerung",
+    "kategorie": "wimpern",
+    "titel": "Wimpernverlängerung",
+    "titelEn": "Eyelash Extensions",
+    "beschreibung": "Verlängerung Wimper für Wimper in vier Ausführungen, von natürlich bis sehr voll.",
+    "varianten": [
+      {
+        "_key": "classic",
+        "titel": "Classic",
+        "originalName": "WIMPERN CLASSIC",
+        "preis": {
+          "chf": 99,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 75
+      },
+      {
+        "_key": "mascara",
+        "titel": "Mascara",
+        "originalName": "WIMPERN MASCARA",
+        "preis": {
+          "chf": 120,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 75
+      },
+      {
+        "_key": "volumen",
+        "titel": "Volumen (3D)",
+        "originalName": "WIMPERN VOLUMEN",
+        "preis": {
+          "chf": 150,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 90,
+        "originalBeschreibung": "3d- preisabweichung je Bedarf"
+      },
+      {
+        "_key": "extra",
+        "titel": "Extra Volumen",
+        "originalName": "WIMPERN EXTRA VOLUMEN",
+        "preis": {
+          "chf": 180,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 120
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 10
+  },
+  {
+    "slug": "wimpern-auffuellen",
+    "kategorie": "wimpern",
+    "titel": "Wimpern auffüllen",
+    "titelEn": "Refill",
+    "beschreibung": "Auffüllen einer bestehenden Wimpernverlängerung.",
+    "varianten": [
+      {
+        "_key": "classic",
+        "titel": "Classic",
+        "originalName": "WP Auffüllen Classic ab",
+        "preis": {
+          "chf": 70,
+          "ab": true,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "preisabweichung je Bedarf"
+      },
+      {
+        "_key": "volumen",
+        "titel": "Volumen",
+        "originalName": "WP Auffüllen Volumen",
+        "preis": {
+          "chf": 80,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 75,
+        "originalBeschreibung": "preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 20
+  },
+  {
+    "slug": "wimpern-lifting",
+    "kategorie": "wimpern",
+    "titel": "Wimpern-Lifting",
+    "titelEn": "Lash Lift",
+    "beschreibung": "Lifting der eigenen Wimpern, ohne Verlängerung.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Wimpern-Lifting",
+        "originalName": "Wimpern-Lifting",
+        "preis": {
+          "chf": 85,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 30
+  },
+  {
+    "slug": "wimpern-entfernen",
+    "kategorie": "wimpern",
+    "titel": "Wimpern entfernen",
+    "titelEn": "Remove",
+    "beschreibung": "Fachgerechtes Entfernen der Wimpernverlängerung.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Wimpern entfernen",
+        "originalName": "Wimpern Entfernen",
+        "preis": {
+          "chf": 30,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 25,
+        "originalBeschreibung": "Remove"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 40
+  },
+  {
+    "slug": "augenbrauen",
+    "kategorie": "waxing",
+    "titel": "Augenbrauen",
+    "beschreibung": "Formen der Augenbrauen mit Wachs.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Augenbrauen",
+        "originalName": "Augenbraun",
+        "preis": {
+          "chf": 20,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 10
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 10
+  },
+  {
+    "slug": "achseln",
+    "kategorie": "waxing",
+    "titel": "Achseln",
+    "beschreibung": "Haarentfernung an den Achseln.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Achseln",
+        "originalName": "Achse",
+        "preis": {
+          "chf": 30,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 20
+  },
+  {
+    "slug": "bikini",
+    "kategorie": "waxing",
+    "titel": "Bikinizone",
+    "beschreibung": "Haarentfernung in der Bikinizone.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Bikinizone",
+        "originalName": "Bikini",
+        "preis": {
+          "chf": 80,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 60
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 30
+  },
+  {
+    "slug": "beine",
+    "kategorie": "waxing",
+    "titel": "Beine komplett",
+    "beschreibung": "Haarentfernung an den ganzen Beinen.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Beine komplett",
+        "originalName": "Beine  (komplett )",
+        "preis": {
+          "chf": 90,
+          "ab": false,
+          "abweichung": true
+        },
+        "dauerMinuten": 60,
+        "originalBeschreibung": "preisabweichung je Bedarf"
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 40
+  },
+  {
+    "slug": "kopfmassage",
+    "kategorie": "massage",
+    "titel": "Kopfmassage",
+    "beschreibung": "Entspannende Kopfmassage, wahlweise 30 oder 60 Minuten.",
+    "varianten": [
+      {
+        "_key": "kurz",
+        "titel": "30 Minuten",
+        "originalName": "Kopf Massage",
+        "preis": {
+          "chf": 55,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 30
+      },
+      {
+        "_key": "lang",
+        "titel": "60 Minuten",
+        "originalName": "Kopf Massage",
+        "preis": {
+          "chf": 85,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 60
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 10
+  },
+  {
+    "slug": "gesichtsmassage",
+    "kategorie": "massage",
+    "titel": "Gesichtsmassage mit Maske",
+    "beschreibung": "Kurze Gesichtsmassage mit Maske.",
+    "varianten": [
+      {
+        "_key": "standard",
+        "titel": "Gesichtsmassage und Maske",
+        "originalName": "Gesicht Massage und Maske",
+        "preis": {
+          "chf": 20,
+          "ab": false,
+          "abweichung": false
+        },
+        "dauerMinuten": 15
+      }
+    ],
+    "hinweise": [],
+    "herkunft": [
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (Leistung, Preis, Dauer)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
+    ],
+    "freigabe": "demo",
+    "reihenfolge": 20
+  }
+]

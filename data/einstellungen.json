@@ -1,0 +1,111 @@
+{
+  "name": "New York Nails Schlieren",
+  "kurzname": "New York Nails",
+  "claim": "Nails, Lashes & Beauty Care",
+  "adresse": {
+    "strasse": "Ringstrasse 1",
+    "plz": "8952",
+    "ort": "Schlieren",
+    "land": "Schweiz"
+  },
+  "telefon": "+41 44 557 50 67",
+  "email": "info@newyorknails-schlieren.ch",
+  "buchung": {
+    "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+    "anbieter": "Beauty Booking (Beprobooking)",
+    "hinweis": "Die Terminbuchung öffnet sich bei Beauty Booking, dem externen Buchungsdienst des Studios."
+  },
+  "karteUrl": "https://www.google.com/maps/place/?q=place_id:ChIJoyoFHnQMkEcRo-3D0oGx4I4",
+  "tourUrl": "https://www.google.ch/maps/@47.3981719,8.4475567,3a,75y,358.15h,90.86t/data=!3m6!1e1!3m4!1sAF1QipOl9Z2rVcm9zTyXakgqsTpI8Lx-meSfaFkL_yz7!2e10!7i8000!8i4000",
+  "social": [
+    {
+      "_key": "instagram",
+      "plattform": "instagram",
+      "url": "https://www.instagram.com/newyorknails.schlieren/",
+      "handle": "newyorknails.schlieren"
+    },
+    {
+      "_key": "facebook",
+      "plattform": "facebook",
+      "url": "https://www.facebook.com/newyorknails.schlieren/",
+      "handle": "newyorknails.schlieren"
+    }
+  ],
+  "oeffnungszeiten": [
+    {
+      "_key": "mo",
+      "tag": "montag",
+      "geschlossen": false,
+      "von": "09:30",
+      "bis": "20:00"
+    },
+    {
+      "_key": "di",
+      "tag": "dienstag",
+      "geschlossen": false,
+      "von": "09:30",
+      "bis": "20:00"
+    },
+    {
+      "_key": "mi",
+      "tag": "mittwoch",
+      "geschlossen": false,
+      "von": "09:30",
+      "bis": "20:00"
+    },
+    {
+      "_key": "do",
+      "tag": "donnerstag",
+      "geschlossen": false,
+      "von": "09:30",
+      "bis": "20:00"
+    },
+    {
+      "_key": "fr",
+      "tag": "freitag",
+      "geschlossen": false,
+      "von": "09:30",
+      "bis": "20:00"
+    },
+    {
+      "_key": "sa",
+      "tag": "samstag",
+      "geschlossen": false,
+      "von": "09:30",
+      "bis": "17:45"
+    },
+    {
+      "_key": "so",
+      "tag": "sonntag",
+      "geschlossen": true
+    }
+  ],
+  "oeffnungszeitenHinweis": "Termine nach Online-Buchung oder telefonischer Vereinbarung.",
+  "sonderzeiten": [],
+  "logo": "logo-wortmarke",
+  "logoDunkel": "logo-wortmarke-weiss",
+  "signet": "logo-signet",
+  "signetDunkel": "logo-signet-weiss",
+  "seoBild": "og-new-york-nails",
+  "herkunft": [
+    {
+      "quelle": "Website des Studios, newyorknails-schlieren.ch (Adresse, Telefon, E-Mail, Links)",
+      "url": "https://newyorknails-schlieren.ch/",
+      "abgerufen": "2026-10-16",
+      "art": "eigene-website"
+    },
+    {
+      "quelle": "Buchungsseite des Studios bei Beauty Booking (Öffnungszeiten, Telefon, Adresse)",
+      "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+      "abgerufen": "2026-10-16",
+      "art": "buchungsplattform"
+    },
+    {
+      "quelle": "Instagram-Profil des Studios (Verlinkung, Kategorie «Nagelstudio»)",
+      "url": "https://www.instagram.com/newyorknails.schlieren/",
+      "abgerufen": "2026-10-16",
+      "art": "eigenes-profil"
+    }
+  ],
+  "freigabe": "demo"
+}

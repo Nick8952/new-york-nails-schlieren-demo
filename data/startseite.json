@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "ueberzeile": "New York Nails, Ringstrasse 1, 8952 Schlieren",
+    "titel": "Nails, Lashes & Beauty Care",
+    "text": "Nagelmodellage, Maniküre und Pediküre, Wimpernverlängerung, Waxing und Massage in Schlieren. Termine buchen Sie online, Tag und Nacht.",
+    "knopf": {
+      "text": "Termin buchen",
+      "ziel": "https://beprobooking.com/salon/new-york-nails-schlieren"
+    },
+    "zweiterKnopf": {
+      "text": "Leistungen und Preise",
+      "ziel": "/leistungen/"
+    }
+  },
+  "leistungen": {
+    "titel": "Vier Bereiche, eine Adresse",
+    "text": "Was das Studio anbietet, steht mit Preis und Dauer auf der Buchungsseite. Hier ist es nach Bereichen geordnet.",
+    "link": {
+      "text": "Alle Leistungen und Preise",
+      "ziel": "/leistungen/"
+    }
+  },
+  "preise": {
+    "titel": "Preise auf einen Blick",
+    "text": "Jede Position zeigt Preis und Dauer, wie sie online buchbar ist. Bei einzelnen Behandlungen kann der Preis je nach Aufwand abweichen; das ist jeweils vermerkt.",
+    "link": {
+      "text": "Alle Leistungen und Preise",
+      "ziel": "/leistungen/"
+    }
+  },
+  "studio": {
+    "titel": "Das Studio an der Ringstrasse",
+    "text": "Nagelstudio mit Nageldesign, Wimpern, Waxing und Massage, gleich beim Bahnhof Schlieren. In der 360°-Ansicht sehen Sie sich im Studio um, bevor Sie kommen.",
+    "link": {
+      "text": "Studio entdecken",
+      "ziel": "/studio/"
+    }
+  },
+  "zeiten": {
+    "titel": "Öffnungszeiten",
+    "text": "Sechs Tage die Woche, am Samstag bis in den späten Nachmittag."
+  },
+  "buchung": {
+    "titel": "Termin buchen",
+    "text": "Behandlung wählen, Zeit wählen, fertig. Die Buchung läuft über Beauty Booking, den Buchungsdienst des Studios."
+  },
+  "kontakt": {
+    "titel": "Kontakt und Anfahrt",
+    "text": "Telefonisch, per E-Mail oder über die Route in Google Maps."
+  },
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Website des Studios (Leitzeile «Nails, Lashes & Beauty Care», Links)",
+        "url": "https://newyorknails-schlieren.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      },
+      {
+        "quelle": "Buchungsseite bei Beauty Booking (Bereiche, Öffnungszeiten)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      },
+      {
+        "quelle": "Instagram-Profil des Studios (Kategorie «Nagelstudio», «24/24 Online»)",
+        "url": "https://www.instagram.com/newyorknails.schlieren/",
+        "abgerufen": "2026-10-16",
+        "art": "eigenes-profil"
+      }
+    ],
+    "freigabe": "demo"
+  },
+  "seoTitel": "Nails, Lashes & Beauty Care in Schlieren",
+  "seoBeschreibung": "New York Nails Schlieren: Nagelmodellage, Maniküre, Pediküre, Wimpernverlängerung, Waxing und Massage an der Ringstrasse 1. Preise, Öffnungszeiten, Online-Buchung."
+}
