@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+/*
+ * Gestaltung «Goldlinie» (siehe docs/DESIGN.md).
+ * Aus dem Logo abgeleitet: die Wortmarke ist schwarz auf Weiss, auf dem eigenen Banner weiss und gold auf Schwarz. Daraus folgt
+ * eine neutrale helle Fläche, kühles Schwarz als Tinte und genau ein Akzent: das Gold des Banners. Die Goldlinie ist das
+ * wiederkehrende Zeichen: unter der Kopfzeile, als Zeitmass in der Preisliste, als Wochenband bei den Öffnungszeiten.
+ * Formen: alles kantig (Radius 0), passend zur geometrischen Wortmarke. Zwei Schriften mit festen Rollen: Outfit (Titel,
+ * Bedienelemente), Manrope (Lauftext, Zahlen). Helles Theme als Grundlage, dunkles Theme über dieselben Tokens.
+ */
+@theme {
+  --color-grund: #f6f6f4;
+  --color-flaeche: #fcfcfb;
+  --color-flaeche-2: #efefec;
+  --color-tinte: #151617;
+  --color-tinte-2: #44464a;
+  --color-grau: #5f6166;
+  --color-linie: #dcdcd8;
+  --color-linie-stark: #b4b4ae;
+  --color-gold: #c9922b;
+  --color-gold-tief: #8a5f14;
+  --color-nacht: #121211;
+  --color-nacht-2: #1d1d1b;
+  --color-nacht-text: #f2f1ec;
+  --color-nacht-text-2: #bdbcb4;
+  --color-nacht-linie: #33332f;
+  --color-fehler: #a3261b;
+  --color-knopf: #151617;
+  --color-knopf-text: #f6f6f4;
+
+  --font-titel: var(--schrift-titel), "Helvetica Neue", Arial, sans-serif;
+  --font-text: var(--schrift-text), "Helvetica Neue", Arial, sans-serif;
+
+  --radius-knopf: 0px;
+  --spacing-rand: clamp(1rem, 4vw, 3rem);
+  --ease-aus: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Dunkles Theme: dieselben Rollen, andere Werte. Keine Section invertiert von sich aus; der Wechsel gilt für die ganze Seite. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-grund: #121211;
+    --color-flaeche: #1d1d1b;
+    --color-flaeche-2: #262624;
+    --color-tinte: #f2f1ec;
+    --color-tinte-2: #c6c5be;
+    --color-grau: #a3a29b;
+    --color-linie: #2f2f2c;
+    --color-linie-stark: #4d4d48;
+    --color-gold-tief: #d9a648;
+    --color-nacht: #0b0b0a;
+    --color-nacht-2: #171716;
+    --color-knopf: #d9a648;
+    --color-knopf-text: #121211;
+  }
+}
+
+@layer base {
+/* Ebenen (einzige z-index-Werte der Website): Kopfzeile 30, mobile Leiste 35, Einwilligungsbanner 40, Sprunglink 50. Dialoge liegen im Top-Layer. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--color-grund);
+  color: var(--color-tinte);
+  font-family: var(--font-text);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* Platz für die mobile Kontaktleiste (verdeckt sonst die Fusszeile) */
+@media (max-width: 63.99rem) {
+  body { padding-bottom: 4.25rem; }
+}
+
+::selection { background: var(--color-gold); color: var(--color-nacht); }
+
+:focus-visible {
+  outline: 3px solid var(--color-gold-tief);
+  outline-offset: 3px;
+}
+.nacht :focus-visible { outline-color: var(--color-gold); }
+}
+
+/*
+ * Eigene Klassen liegen in der Ebene «components»: So können Tailwind-Utilities (hidden, sm:inline-flex, mt-8 …)
+ * sie gezielt übersteuern. Ohne Ebene würden sie jede Utility schlagen.
+ */
+@layer components {
+/* ── Raster ─────────────────────────────────────────────────────────── */
+.behaelter {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: var(--spacing-rand);
+}
+/* Dichte 4 (ruhig, aber nicht leer): 56 bis 112 px je Abschnitt, ein Rhythmus auf der ganzen Website */
+.abschnitt { padding-block: clamp(3.5rem, 8vw, 7rem); }
+
+/* ── Schrift ────────────────────────────────────────────────────────── */
+.titel-1, .titel-2, .titel-3, .titel-4 { font-family: var(--font-titel); font-weight: 600; text-wrap: balance; }
+.titel-1, .titel-2 { hyphens: auto; overflow-wrap: break-word; }
+.titel-1 { font-size: clamp(2.375rem, 1.4rem + 4vw, 4.5rem); line-height: 1.02; letter-spacing: -0.025em; }
+.titel-2 { font-size: clamp(1.8rem, 1.3rem + 2.1vw, 2.9rem); line-height: 1.06; letter-spacing: -0.02em; }
+.titel-3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.55rem); line-height: 1.18; letter-spacing: -0.012em; }
+.titel-4 { font-size: 1.0625rem; line-height: 1.3; font-weight: 600; }
+.vorspann { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3rem); line-height: 1.5; color: var(--color-tinte-2); max-width: 46ch; text-wrap: pretty; }
+.lauftext { max-width: 62ch; text-wrap: pretty; }
+.klein { font-size: 0.9rem; line-height: 1.45; }
+.etikett { font-family: var(--font-titel); font-size: 0.875rem; line-height: 1.3; font-weight: 500; color: var(--color-grau); }
+.zahl { font-variant-numeric: tabular-nums; }
+
+.textlink {
+  color: var(--color-gold-tief);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-thickness 160ms var(--ease-aus);
+}
+.textlink:hover { text-decoration-thickness: 2px; }
+
+.nur-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ── Knöpfe ─────────────────────────────────────────────────────────── */
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0.7rem 1.4rem;
+  font-family: var(--font-titel);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: var(--radius-knopf);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: background-color 180ms var(--ease-aus), border-color 180ms var(--ease-aus), color 180ms var(--ease-aus), transform 140ms var(--ease-aus);
+}
+.knopf:active { transform: scale(0.98); }
+.knopf-primaer { background: var(--color-knopf); color: var(--color-knopf-text); border-color: var(--color-knopf); }
+.knopf-primaer:hover { background: var(--color-gold-tief); border-color: var(--color-gold-tief); color: var(--color-grund); }
+.knopf-sekundaer { background: transparent; color: var(--color-tinte); border-color: var(--color-tinte); }
+.knopf-sekundaer:hover { background: var(--color-tinte); color: var(--color-grund); }
+.knopf-klein { min-height: 2.75rem; padding: 0.55rem 1rem; font-size: 0.9375rem; }
+/* Knöpfe auf dunkler Fläche: Gold als Fläche, Schwarz als Schrift (wie auf dem Banner des Studios) */
+.nacht .knopf-primaer { background: var(--color-gold); border-color: var(--color-gold); color: var(--color-nacht); }
+.nacht .knopf-primaer:hover { background: var(--color-nacht-text); border-color: var(--color-nacht-text); }
+.nacht .knopf-sekundaer { color: var(--color-nacht-text); border-color: var(--color-nacht-text); }
+.nacht .knopf-sekundaer:hover { background: var(--color-nacht-text); color: var(--color-nacht); }
+
+/* ── Goldlinie: das wiederkehrende Zeichen ──────────────────────────── */
+.goldlinie { height: 2px; background: var(--color-gold); }
+
+/* ── Dunkle Fläche (einziger Farbblock der Seite) ───────────────────── */
+.nacht { background: var(--color-nacht); color: var(--color-nacht-text); }
+.nacht .etikett { color: var(--color-nacht-text-2); }
+.nacht .vorspann { color: var(--color-nacht-text-2); }
+.nacht .textlink { color: var(--color-gold); }
+
+/* ── Zeitmass: Dauer als Linie (Preisliste) ─────────────────────────── */
+.zeitmass { position: relative; height: 4px; background: var(--color-linie); }
+.zeitmass > span { position: absolute; inset: 0 auto 0 0; background: var(--color-gold); }
+.nacht .zeitmass { background: var(--color-nacht-linie); }
+
+/* Preisliste: eine Position je Zeile, auf dem Handy untereinander */
+.position {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.35rem 1.25rem;
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--color-linie);
+}
+.position:last-child { border-bottom: 1px solid var(--color-linie); }
+@media (min-width: 40rem) {
+  .position { grid-template-columns: minmax(0, 1.4fr) minmax(8rem, 1fr) auto; align-items: center; }
+}
+
+/* ── Wochenband: Öffnungszeiten als Linien (08 bis 21 Uhr) ──────────── */
+.wochenband { display: grid; gap: 0.5rem; }
+.wochenband-zeile { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr) auto; align-items: center; gap: 0.75rem; min-height: 1.75rem; }
+@media (max-width: 29.99rem) { .wochenband-zeile { grid-template-columns: 3rem minmax(0, 1fr) auto; } }
+.wochenband-spur { position: relative; height: 6px; background: var(--color-nacht-linie); }
+.wochenband-spur > span { position: absolute; top: 0; bottom: 0; background: var(--color-gold); }
+.wochenband-zeile[aria-current="date"] .wochenband-tag { color: var(--color-gold); }
+
+/* ── Dialog (Menü) ──────────────────────────────────────────────────── */
+dialog.menue {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--color-grund);
+  color: var(--color-tinte);
+}
+dialog.menue::backdrop { background: color-mix(in srgb, var(--color-nacht) 55%, transparent); }
+@media (min-width: 64rem) {
+  dialog.menue { height: auto; max-height: 100dvh; width: 100vw; border-bottom: 2px solid var(--color-gold); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog.menue[open] { animation: menue-auf 240ms var(--ease-aus); }
+  @keyframes menue-auf { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+}
+dialog { border-radius: 0; }
+
+/* ── Formular ───────────────────────────────────────────────────────── */
+.feld { display: grid; gap: 0.4rem; }
+.feld label { font-family: var(--font-titel); font-weight: 600; font-size: 0.95rem; }
+.feld input, .feld select, .feld textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  color: var(--color-tinte);
+  background: var(--color-flaeche);
+  /* Feldrand mindestens 3:1 zum Grund (WCAG 1.4.11): Grau statt der leichten Trennlinie */
+  border: 1.5px solid var(--color-grau);
+  border-radius: 0;
+}
+.feld textarea { min-height: 8rem; resize: vertical; }
+.feld input:focus-visible, .feld select:focus-visible, .feld textarea:focus-visible { border-color: var(--color-gold-tief); outline-offset: 2px; }
+.feld [aria-invalid="true"] { border-color: var(--color-fehler); }
+.feld .hilfe { font-size: 0.875rem; color: var(--color-grau); }
+.feld .fehler { font-size: 0.9rem; font-weight: 600; color: var(--color-fehler); }
+@media (prefers-color-scheme: dark) { .feld .fehler { color: #f09a8f; } }
+
+/* ── Mobile Kontaktleiste ───────────────────────────────────────────── */
+.leiste {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 35;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--color-linie-stark);
+  border-top: 1px solid var(--color-linie-stark);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.leiste a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3.5rem;
+  font-family: var(--font-titel);
+  font-weight: 600;
+  background: var(--color-grund);
+  color: var(--color-tinte);
+}
+.leiste a.leiste-buchen { background: var(--color-knopf); color: var(--color-knopf-text); }
+@media (min-width: 64rem) { .leiste { display: none; } }
+
+/* ── Hover nur für Zeiger, die hovern können ────────────────────────── */
+@media (hover: hover) and (pointer: fine) {
+  .zeile-link:hover .zeile-pfeil { transform: translateX(4px); }
+}
+.zeile-pfeil { transition: transform 200ms var(--ease-aus); }
+
+/* ── Rich Text (Rechtsseiten) ───────────────────────────────────────── */
+.richtext { max-width: 68ch; }
+.richtext h2 { font-family: var(--font-titel); font-weight: 600; font-size: clamp(1.3rem, 1.15rem + 0.6vw, 1.6rem); line-height: 1.2; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.richtext h3 { font-family: var(--font-titel); font-weight: 600; font-size: 1.1rem; margin-top: 1.75rem; margin-bottom: 0.5rem; }
+.richtext p { margin-bottom: 1rem; text-wrap: pretty; }
+.richtext ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; display: grid; gap: 0.4rem; }
+.richtext a { color: var(--color-gold-tief); text-decoration: underline; text-underline-offset: 0.2em; }
+}
+
+/* Schriften: lokal aus den fontsource-Paketen (next/font/local setzt die Variablen --schrift-titel und --schrift-text) */
+
+@layer components {
+/* Wochenband auf heller Fläche (Kontaktseite): helle Spur */
+.wochenband-hell .wochenband-spur { background: var(--color-linie); }
+.wochenband-hell .wochenband-zeile[aria-current="date"] .wochenband-tag { color: var(--color-gold-tief); }
+}
