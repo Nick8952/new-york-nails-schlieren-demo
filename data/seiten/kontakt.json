@@ -2,17 +2,17 @@
   "titel": "Kontakt und Anfahrt",
   "einleitung": "Termine buchen Sie online oder telefonisch. Für Fragen erreichen Sie das Studio per E-Mail.",
   "buchungTitel": "Termin buchen",
-  "buchungText": "Die Online-Buchung zeigt freie Zeiten und bestätigt den Termin. Sie läuft bei Beauty Booking, dem externen Buchungsdienst des Studios.",
+  "buchungText": "Der Knopf «Termin buchen» öffnet Beauty Booking, den externen Buchungsdienst des Studios. Behandlung und Zeit wählen Sie dort; diese Website nimmt keine Buchungen entgegen.",
   "direktTitel": "Direkt erreichen",
   "anfahrtTitel": "Anfahrt",
-  "anfahrtText": "Das Studio liegt an der Ringstrasse 1 in 8952 Schlieren, nahe beim Bahnhof Schlieren. Die Route öffnet sich in Google Maps in einem neuen Fenster; eine Karte wird nicht eingebettet.",
+  "anfahrtText": "Das Studio liegt an der Ringstrasse 1 in 8952 Schlieren. Die Route öffnet sich in Google Maps in einem neuen Fenster; eine Karte wird nicht eingebettet.",
   "zeitenTitel": "Öffnungszeiten",
   "seoTitel": "Kontakt und Anfahrt",
   "seoBeschreibung": "New York Nails Schlieren erreichen: Ringstrasse 1, 8952 Schlieren, Telefon 044 557 50 67, E-Mail, Öffnungszeiten, Route und Online-Terminbuchung.",
   "belege": {
     "herkunft": [
       {
-        "quelle": "Website des Studios (Adresse, Telefon, E-Mail) und Buchungsseite (Lage, Öffnungszeiten)",
+        "quelle": "Website des Studios (Adresse, Telefon, E-Mail, Buchungslink)",
         "url": "https://newyorknails-schlieren.ch/",
         "abgerufen": "2026-10-16",
         "art": "eigene-website"

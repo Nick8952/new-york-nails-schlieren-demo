@@ -25,6 +25,8 @@ export async function offeneFreigaben(q: Inhaltsquelle): Promise<string[]> {
   for (const g of galerie) pruefe("Galerie", g.titel, g.freigabe);
   for (const t of team) pruefe("Team", t.name, t.freigabe);
   for (const f of fragen) pruefe("Fragen", f.frage, f.freigabe);
+  pruefe("Impressum", "Betreiberangaben und Texte", impressum.belege.freigabe);
+  pruefe("Datenschutzerklärung", "Verantwortliche und Texte", datenschutz.belege.freigabe);
   if (impressum.bloecke.some((b) => /\bDemo\b/.test(blockText(b)))) offen.push("Das Impressum beschreibt noch die Demo (Betreiber, Zweck): für den Produktivbetrieb neu schreiben.");
   if (datenschutz.bloecke.some((b) => /\bDemo\b|GitHub Pages/.test(blockText(b)))) offen.push("Die Datenschutzerklärung beschreibt noch die Demo auf GitHub Pages: an das produktive Hosting anpassen.");
   return offen;

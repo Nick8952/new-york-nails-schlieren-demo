@@ -25,7 +25,7 @@
     "Beim blossen Aufruf dieser Website werden keine Daten an die folgenden Anbieter übermittelt. Erst wenn Sie einen entsprechenden Link anklicken, verlassen Sie diese Website, und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters:",
     {
       "liste": [
-        "**Terminbuchung** bei Beauty Booking, einem Dienst der Lumxi GmbH (beprobooking.com). Die Buchung, die Erfassung Ihrer Kontaktdaten und die Terminbestätigung finden vollständig dort statt. Diese Website erfährt nichts davon.",
+        "**Terminbuchung** bei Beauty Booking (beprobooking.com; laut Fusszeile der Buchungsseite betrieben von der Lumxi GmbH). Die Buchung und die Erfassung Ihrer Angaben finden vollständig dort statt. Diese Website erfährt nichts davon.",
         "**Route und 360°-Ansicht** bei Google Maps (Google Ireland Limited, Dublin, Irland; Google LLC, USA).",
         "**Instagram** und **Facebook** (Meta Platforms Ireland Limited, Dublin, Irland).",
         "**Telefon- und E-Mail-Links** öffnen Ihr Telefon- beziehungsweise E-Mail-Programm."
@@ -47,5 +47,16 @@
     "Diese Erklärung beschreibt den Stand der Demo. Wird die Website produktiv betrieben, zum Beispiel mit anderem Hosting oder einem Redaktionssystem, wird sie vor der Veröffentlichung angepasst."
   ],
   "seoTitel": "Datenschutzerklärung",
-  "seoBeschreibung": "Datenschutzerklärung der Demo-Website für New York Nails Schlieren: Hosting über GitHub Pages, keine Cookies, nur externe Links, Kontakt per vorbereiteter E-Mail."
+  "seoBeschreibung": "Datenschutzerklärung der Demo-Website für New York Nails Schlieren: Hosting über GitHub Pages, keine Cookies, nur externe Links, Kontakt per vorbereiteter E-Mail.",
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Angaben des Demo-Betreibers (Nick Holzbecher) und Kontaktdaten des Studios von dessen Website",
+        "url": "https://newyorknails-schlieren.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      }
+    ],
+    "freigabe": "demo"
+  }
 }

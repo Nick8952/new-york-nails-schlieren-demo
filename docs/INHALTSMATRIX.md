@@ -23,7 +23,7 @@ Stand: 16. Oktober 2026. Jede Angabe aus dem Auftrag wurde erneut geprüft. Lege
 | --- | --- | --- | --- |
 | Q1 | [newyorknails-schlieren.ch](https://newyorknails-schlieren.ch/) | eigene Website | Name, Adresse, Telefon, E-Mail, Leitzeile, Links (Buchung, 360°, Maps, Instagram, Facebook) |
 | Q2 | [Jubiläumsbanner](https://newyorknails-schlieren.ch/img/10JahreNYN.jpeg) (einziges Bild der Website) | eigene Website | Wortmarke (Ausschnitt fürs Vorschaubild), Farbwelt (Schwarz, Gold), Aussage «10 Jahre Jubiläum» (Mai 2026) |
-| Q3 | [Buchungsseite bei Beauty Booking](https://beprobooking.com/salon/new-york-nails-schlieren) | Buchungsplattform | alle Leistungen, Preise, Dauern, Öffnungszeiten, Telefon, virtuelle Ansicht, Logos |
+| Q3 | [Buchungsseite bei Beauty Booking](https://beprobooking.com/salon/new-york-nails-schlieren) | Buchungsplattform | alle Leistungen, Preise, Dauern, Öffnungszeiten, Telefon, virtuelle Ansicht, Logos; Fusszeile «Angetrieben von Lumxi GmbH» (Betreiberin der Plattform, nur in den Rechtstexten genannt) |
 | Q4 | Öffentliche Schnittstelle der Buchungsplattform (`api-v1.beprobooking.com/v1/business-object/url-name/new-york-nails-schlieren`) | Buchungsplattform | Gegenprobe aller Positionen, deaktivierte Positionen, Koordinaten, Place-ID |
 | Q5 | [Instagram-Profil](https://www.instagram.com/newyorknails.schlieren/) | eigenes Profil | Kategorie «Nagelstudio», Leistungsliste der Bio, abweichende Öffnungszeiten (nur intern), «24/24 Online» |
 | Q6 | [360°-Ansicht in Google Maps](https://www.google.ch/maps/@47.3981719,8.4475567,3a,75y,358.15h,90.86t/data=!3m6!1e1!3m4!1sAF1QipOl9Z2rVcm9zTyXakgqsTpI8Lx-meSfaFkL_yz7!2e10!7i8000!8i4000) (Ziel des goo.gl-Links der Website) | eigenes Profil | nur als externer Link |
@@ -80,7 +80,7 @@ Website und Buchungssystem sind **getrennte Datenquellen**. Diese Tabelle ist de
 | NAILS & MORE | Shellack ( Gel Color) | Fingernagel oder Fusszehen -preisabweichung je Bedarf | 45 | 30 | Shellack: Fingernägel oder Fusszehen |
 | NAILS & MORE | Shellack | French/Glitzer- preisabweichung je Bedarf | 50 | 60 | Shellack: French oder Glitzer |
 | NAILS & MORE | Pediküre mit Farbe | Complete- preisabweichung je Bedarf | 85 | 60 | Pediküre: Mit Farbe (Complete) |
-| NAILS & MORE | Pediküre ( Classic Pedicure) | Fusspflege Mann/Frau | 55 | 30 | Pediküre: Klassische Pediküre |
+| NAILS & MORE | Pediküre␣␣( Classic Pedicure) (zwei Leerzeichen im Original) | Fusspflege Mann/Frau | 55 | 30 | Pediküre: Klassische Pediküre |
 | NAILS & MORE | Pediküre mit Normal Lack | Ohne Gel-Farbe -preisabweichung je Bedarf | 75 | 75 | Pediküre: Mit Normallack, ohne Gelfarbe |
 | NAILS & MORE | Zehnagel-Modellage | – | 90 | 60 | Zehennagel-Modellage |
 | NAILS & MORE | Entfernen ( Remove ) | Bei Schellack chf 20 | 30 | 15 | Entfernen (Hinweis «Bei Shellack CHF 20») |
@@ -98,7 +98,7 @@ Website und Buchungssystem sind **getrennte Datenquellen**. Diese Tabelle ist de
 | WIMPERNVERLÄNGERUNG | Wimpern Entfernen | Remove | 30 | 25 | Wimpern entfernen |
 | WAXING | Augenbraun | – | 20 | 10 | Augenbrauen |
 | WAXING | Bikini | – | 80 | 60 | Bikinizone |
-| WAXING | Beine (komplett ) | preisabweichung je Bedarf | 90 | 60 | Beine komplett |
+| WAXING | Beine␣␣(komplett ) (zwei Leerzeichen im Original) | preisabweichung je Bedarf | 90 | 60 | Beine komplett |
 | WAXING | Achse | preisabweichung je Bedarf | 30 | 60 | Achseln (Dauer 60 Minuten wie in der Quelle; wirkt wie ein Platzhalter, bitte prüfen) |
 | Massage | Kopf Massage | – | 55 | 30 | Kopfmassage: 30 Minuten |
 | Massage | Kopf Massage | – | 85 | 60 | Kopfmassage: 60 Minuten |

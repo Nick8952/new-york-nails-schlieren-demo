@@ -290,7 +290,7 @@
     "kategorie": "naegel",
     "titel": "Entfernen",
     "titelEn": "Remove",
-    "beschreibung": "Fachgerechtes Entfernen der Modellage oder von Shellack.",
+    "beschreibung": "Entfernen der Modellage oder von Shellack.",
     "varianten": [
       {
         "_key": "standard",
@@ -497,7 +497,7 @@
     "kategorie": "wimpern",
     "titel": "Wimpern entfernen",
     "titelEn": "Remove",
-    "beschreibung": "Fachgerechtes Entfernen der Wimpernverlängerung.",
+    "beschreibung": "Entfernen der Wimpernverlängerung.",
     "varianten": [
       {
         "_key": "standard",

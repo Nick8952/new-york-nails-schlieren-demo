@@ -1,11 +1,39 @@
 {
   "titel": "Das Studio",
-  "einleitung": "New York Nails Schlieren ist ein Nagelstudio an der Ringstrasse 1, wenige Schritte vom Bahnhof Schlieren. Nails, Lashes & Beauty Care: Nageldesign, Wimpern, Waxing und Massage unter einem Dach.",
+  "einleitung": "New York Nails Schlieren ist ein Nagelstudio an der Ringstrasse 1 in Schlieren. Nails, Lashes & Beauty Care: Nageldesign, Wimpern, Waxing und Massage unter einem Dach.",
   "abschnitte": [
-    { "_key": "angebot", "titel": "Vier Bereiche", "text": "Nagelmodellage als neues Set oder zum Auffüllen, Maniküre und Pediküre, Shellack, Wimpernverlängerung und Wimpern-Lifting, Waxing sowie Kopf- und Gesichtsmassage. Jede Position ist mit Preis und Dauer ausgewiesen und lässt sich einzeln buchen; wo der Preis je nach Aufwand abweichen kann, steht es dabei.", "link": { "text": "Leistungen und Preise", "ziel": "/leistungen/" } },
-    { "_key": "buchung", "titel": "Buchen, wann es Ihnen passt", "text": "Termine lassen sich rund um die Uhr online reservieren. Sie sehen freie Zeiten, wählen die Behandlung und bekommen die Bestätigung vom Buchungsdienst. Wer lieber anruft, erreicht das Studio zu den Öffnungszeiten telefonisch.", "link": { "text": "Termin buchen", "ziel": "https://beprobooking.com/salon/new-york-nails-schlieren" } },
-    { "_key": "jubilaeum", "titel": "Zehn Jahre in Schlieren", "text": "Im Mai 2026 feierte das Studio sein zehnjähriges Jubiläum. Ein Jahrzehnt Schönheit und Vertrauen, wie es das Studio selbst nennt." },
-    { "_key": "social", "titel": "Aktuelle Arbeiten auf Instagram", "text": "Neue Designs, Farben und French-Varianten zeigt das Studio laufend auf Instagram unter newyorknails.schlieren.", "link": { "text": "Instagram", "ziel": "https://www.instagram.com/newyorknails.schlieren/" } }
+    {
+      "_key": "angebot",
+      "titel": "Vier Bereiche",
+      "text": "Nagelmodellage als neues Set oder zum Auffüllen, Maniküre und Pediküre, Shellack, Wimpernverlängerung und Wimpern-Lifting, Waxing sowie Kopf- und Gesichtsmassage. Jede Position ist mit Preis und Dauer ausgewiesen und lässt sich einzeln buchen; wo der Preis je nach Aufwand abweichen kann, steht es dabei.",
+      "link": {
+        "text": "Leistungen und Preise",
+        "ziel": "/leistungen/"
+      }
+    },
+    {
+      "_key": "buchung",
+      "titel": "Buchen, wann es Ihnen passt",
+      "text": "Termine lassen sich online reservieren: Der Knopf «Termin buchen» öffnet Beauty Booking, den Buchungsdienst des Studios. Behandlung und Zeit wählen Sie dort. Wer lieber anruft, erreicht das Studio zu den Öffnungszeiten telefonisch.",
+      "link": {
+        "text": "Termin buchen",
+        "ziel": "https://beprobooking.com/salon/new-york-nails-schlieren"
+      }
+    },
+    {
+      "_key": "jubilaeum",
+      "titel": "Zehn Jahre in Schlieren",
+      "text": "Im Mai 2026 feierte das Studio sein zehnjähriges Jubiläum. Ein Jahrzehnt Schönheit und Vertrauen, wie es das Studio selbst nennt."
+    },
+    {
+      "_key": "social",
+      "titel": "Aktuelle Arbeiten auf Instagram",
+      "text": "Neue Designs, Farben und French-Varianten zeigt das Studio laufend auf Instagram unter newyorknails.schlieren.",
+      "link": {
+        "text": "Instagram",
+        "ziel": "https://www.instagram.com/newyorknails.schlieren/"
+      }
+    }
   ],
   "tourTitel": "Sehen Sie sich um",
   "tourText": "Die 360°-Ansicht in Google Maps zeigt den Empfang, die Arbeitsplätze und die Farbwand. Sie öffnet sich in einem neuen Fenster bei Google.",
@@ -15,10 +43,30 @@
   "fragenTitel": "Gut zu wissen",
   "belege": {
     "herkunft": [
-      { "quelle": "Website des Studios (Leitzeile, 360°-Ansicht, Links zu Instagram und Facebook)", "url": "https://newyorknails-schlieren.ch/", "abgerufen": "2026-10-16", "art": "eigene-website" },
-      { "quelle": "Jubiläumsbanner auf der Website des Studios («10 Jahre Jubiläum», «Ein Jahrzehnt Schönheit & Vertrauen», 20. bis 23. Mai 2026)", "url": "https://newyorknails-schlieren.ch/img/10JahreNYN.jpeg", "abgerufen": "2026-10-16", "art": "eigene-website" },
-      { "quelle": "Buchungsseite bei Beauty Booking (Bereiche, Online-Buchung, virtuelle Ansicht)", "url": "https://beprobooking.com/salon/new-york-nails-schlieren", "abgerufen": "2026-10-16", "art": "buchungsplattform" },
-      { "quelle": "Instagram-Profil des Studios (Kategorie «Nagelstudio», Leistungen, «24/24 Online»)", "url": "https://www.instagram.com/newyorknails.schlieren/", "abgerufen": "2026-10-16", "art": "eigenes-profil" }
+      {
+        "quelle": "Website des Studios (Leitzeile, 360°-Ansicht, Links zu Instagram und Facebook)",
+        "url": "https://newyorknails-schlieren.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      },
+      {
+        "quelle": "Jubiläumsbanner auf der Website des Studios («10 Jahre Jubiläum», «Ein Jahrzehnt Schönheit & Vertrauen», 20. bis 23. Mai 2026)",
+        "url": "https://newyorknails-schlieren.ch/img/10JahreNYN.jpeg",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      },
+      {
+        "quelle": "Buchungsseite bei Beauty Booking (Bereiche, Online-Buchung, virtuelle Ansicht)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      },
+      {
+        "quelle": "Instagram-Profil des Studios (Kategorie «Nagelstudio», Leistungen, «24/24 Online»)",
+        "url": "https://www.instagram.com/newyorknails.schlieren/",
+        "abgerufen": "2026-10-16",
+        "art": "eigenes-profil"
+      }
     ],
     "freigabe": "demo"
   },

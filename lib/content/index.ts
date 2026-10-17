@@ -29,6 +29,20 @@ async function laden(): Promise<Inhaltsquelle> {
   return lokaleQuelle;
 }
 
+/**
+ * Invarianten, die für beide Inhaltsquellen gelten und sich nicht in einem einzelnen Schema ausdrücken lassen (sie betreffen mehrere
+ * Dokumente): Es gibt genau eine Buchungsadresse. Bereichslinks dürfen sie höchstens verlängern, der Buchungsknopf der Kopfzeile und
+ * die mobile Leiste zeigen auf sie. Bricht den Build mit klarer Meldung ab, auch mit Inhalten aus Sanity.
+ */
+export async function invariantenPruefen(q: Inhaltsquelle): Promise<void> {
+  const [e, t, kategorien] = await Promise.all([q.getEinstellungen(), q.getTexte(), q.getKategorien()]);
+  const fehler: string[] = [];
+  if (t.kopf.buchen.ziel !== e.buchung.url) fehler.push(`Der Buchungsknopf (texte.kopf.buchen) zeigt auf «${t.kopf.buchen.ziel}», die Buchungsadresse ist «${e.buchung.url}».`);
+  for (const k of kategorien) if (k.buchungUrl && !k.buchungUrl.startsWith(e.buchung.url)) fehler.push(`Bereich «${k.slug}»: Buchungslink «${k.buchungUrl}» beginnt nicht mit der Buchungsadresse «${e.buchung.url}».`);
+  if (fehler.length) throw new Error(`Inhalte verletzen die Buchungsregel:\n${fehler.map((f) => `  - ${f}`).join("\n")}`);
+}
+
+let invariantenGeprueft: Promise<void> | null = null;
 let freigabeGeprueft: Promise<void> | null = null;
 /**
  * Die Inhaltsquelle des Builds. Ist die Indexierung für eine echte Domain eingeschaltet (INDEXIERUNG=1), bricht der erste
@@ -37,6 +51,8 @@ let freigabeGeprueft: Promise<void> | null = null;
  */
 export async function inhaltsquelle(): Promise<Inhaltsquelle> {
   const q = await laden();
+  invariantenGeprueft ??= invariantenPruefen(q);
+  await invariantenGeprueft;
   if (indexierungErlaubt && !indexierungProbe) {
     freigabeGeprueft ??= offeneFreigaben(q).then((offen) => {
       if (offen.length) throw new Error(`INDEXIERUNG=1 ist gesetzt, aber ${offen.length} Punkt(e) sind nicht freigegeben:\n${offen.map((o) => `  - ${o}`).join("\n")}\nErst klären (docs/UEBERGABE.md), dann indexieren.`);

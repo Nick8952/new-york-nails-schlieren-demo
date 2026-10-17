@@ -12,7 +12,7 @@
 // Aufruf: npm run inhalt:pruefen   ·   vor dem Go-Live: npm run inhalt:pruefen -- --live
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
-import { lokaleQuelle } from "../lib/content/local";
+import { inhaltsquelle, inhaltsquelleName } from "../lib/content";
 import { pfade } from "../lib/content/modell";
 import { istErlaubtesLinkziel } from "../lib/assets";
 import { offeneFreigaben } from "../lib/content/freigabe";
@@ -20,7 +20,9 @@ import { offeneFreigaben } from "../lib/content/freigabe";
 const live = process.argv.includes("--live");
 const fehler: string[] = [];
 const hinweise: string[] = [];
-const q = lokaleQuelle;
+// Prüft die Quelle, die auch der Build verwendet (lokal oder CONTENT_SOURCE=sanity); Bildprüfungen gelten nur lokal.
+const q = await inhaltsquelle();
+const lokal = inhaltsquelleName === "lokal";
 const [e, t, start, kategorien, leistungen, lSeite, studio, kontakt, impressum, datenschutz, galerie, team, fragen] = await Promise.all([
   q.getEinstellungen(), q.getTexte(), q.getStartseite(), q.getKategorien(), q.getLeistungen(), q.getLeistungenSeite(), q.getStudioSeite(), q.getKontaktSeite(),
   q.getRechtSeite("impressum"), q.getRechtSeite("datenschutz"), q.getGalerie(), q.getTeam(), q.getFragen(),
@@ -137,16 +139,18 @@ for (const l of leistungen) {
   if (new Set(tage).size !== tage.length) fehler.push("einstellungen.oeffnungszeiten: ein Wochentag kommt doppelt vor");
 }
 
-// ── Bilder ─────────────────────────────────────────────────────────────────
-const verzeichnis = JSON.parse(readFileSync("data/bilder.json", "utf8")) as Record<string, { alt: string; symbolbild: boolean; nachweis?: { urheber?: string; quelle?: string; lizenz?: string }; quellen: { avif: { url: string }[]; webp: { url: string }[] } }>;
-const vorhanden = new Set(readdirSync("public/bilder"));
+// ── Bilder (nur lokale Quelle) ─────────────────────────────────────────────
+const verzeichnis = lokal ? (JSON.parse(readFileSync("data/bilder.json", "utf8")) as Record<string, { alt: string; symbolbild: boolean; nachweis?: { urheber?: string; quelle?: string; lizenz?: string }; quellen: { avif: { url: string }[]; webp: { url: string }[] } }>) : {};
+const vorhanden = new Set(lokal ? readdirSync("public/bilder") : []);
 for (const [id, b] of Object.entries(verzeichnis)) {
   if (!b.alt.trim()) fehler.push(`Bild «${id}»: Alternativtext fehlt`);
   if (!b.nachweis?.urheber || !b.nachweis.quelle || !b.nachweis.lizenz) fehler.push(`Bild «${id}»: Bildnachweis unvollständig`);
   for (const v of [...b.quellen.avif, ...b.quellen.webp]) if (!vorhanden.has(path.basename(v.url))) fehler.push(`Bild «${id}»: Datei fehlt in public/bilder: ${v.url} (npm run bilder)`);
 }
-const rohInhalte = ["einstellungen", "startseite", "galerie", "team"].map((d) => readFileSync(`data/${d}.json`, "utf8")).join("\n");
-for (const id of Object.keys(verzeichnis)) if (!rohInhalte.includes(`"${id}"`)) fehler.push(`Bild «${id}» wird nirgends verwendet: aus scripts/bilder-liste.json entfernen oder einsetzen`);
+if (lokal) {
+  const rohInhalte = ["einstellungen", "startseite", "galerie", "team"].map((d) => readFileSync(`data/${d}.json`, "utf8")).join("\n");
+  for (const id of Object.keys(verzeichnis)) if (!rohInhalte.includes(`"${id}"`)) fehler.push(`Bild «${id}» wird nirgends verwendet: aus scripts/bilder-liste.json entfernen oder einsetzen`);
+}
 
 // ── Quellen und Freigaben ──────────────────────────────────────────────────
 type Beleg = { wo: string; titel: string; herkunft: { url?: string; art: string; quelle: string }[]; freigabe: string };
@@ -161,6 +165,8 @@ const belege: Beleg[] = [
   { wo: "Studioangaben", titel: "Einstellungen", herkunft: e.herkunft, freigabe: e.freigabe },
   ...kategorien.map((k) => ({ wo: "Leistungsbereiche", titel: k.titel, herkunft: k.herkunft, freigabe: k.freigabe })),
   { wo: "Kontakt und Anfahrt", titel: "Belege der Seite", ...kontakt.belege },
+  { wo: "Impressum", titel: "Belege der Seite", ...impressum.belege },
+  { wo: "Datenschutzerklärung", titel: "Belege der Seite", ...datenschutz.belege },
 ];
 for (const b of belege) for (const h of b.herkunft) if (!h.url && h.art !== "eigene-quelle") fehler.push(`${b.wo}, «${b.titel}»: Quelle «${h.quelle}» ohne Adresse`);
 const offen = await offeneFreigaben(q);
@@ -177,4 +183,4 @@ if (fehler.length) {
   process.exit(1);
 }
 const varianten = leistungen.reduce((s, l) => s + l.varianten.length, 0);
-console.log(`✓ Inhalte in Ordnung: ${texte.length} Texte, ${links.length} Links, ${Object.keys(verzeichnis).length} Bilder, ${leistungen.length} Leistungen mit ${varianten} Positionen, ${belege.length} Belege mit Quelle${live ? ", alles freigegeben" : ""}.`);
+console.log(`✓ Inhalte (${inhaltsquelleName}) in Ordnung: ${texte.length} Texte, ${links.length} Links, ${Object.keys(verzeichnis).length} Bilder, ${leistungen.length} Leistungen mit ${varianten} Positionen, ${belege.length} Belege mit Quelle${live ? ", alles freigegeben" : ""}.`);

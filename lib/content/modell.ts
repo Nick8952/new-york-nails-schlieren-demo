@@ -51,7 +51,7 @@ export const bildSchema = z.object({
 export type Bild = z.infer<typeof bildSchema>;
 
 // ── Fliesstext ─────────────────────────────────────────────────────────────
-const inlineSchema = z.union([z.string(), z.object({ text: z.string(), fett: z.boolean().optional(), link: z.string().optional() })]);
+const inlineSchema = z.union([z.string(), z.object({ text: z.string(), fett: z.boolean().optional(), link: z.string().regex(LINKZIEL, "Linkziel nicht erlaubt (siehe LINKZIEL).").optional() })]);
 export type Inline = z.infer<typeof inlineSchema>;
 export const blockSchema = z.discriminatedUnion("art", [
   z.object({ art: z.literal("absatz"), inhalt: z.array(inlineSchema) }),
@@ -297,6 +297,8 @@ export const rechtSeiteSchema = z.object({
   slug: z.enum(["impressum", "datenschutz"]),
   titel: z.string().min(1), einleitung: z.string().optional(), stand: z.string().min(1),
   bloecke: z.array(blockSchema).min(1),
+  /** Auch Rechtstexte brauchen Quelle und Freigabe (Betreiberangaben, Kontaktdaten) */
+  belege: belegeSchema,
   ...seoSchema,
 });
 export type RechtSeite = z.infer<typeof rechtSeiteSchema>;

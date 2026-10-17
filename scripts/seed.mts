@@ -94,8 +94,8 @@ function dokumenteBauen(): Doc[] {
   docs.push({ _id: "studioSeite", _type: "studioSeite", ...st, abschnitte: liste(st.abschnitte, "abschnittMitLink").map((a) => ohneLeer({ ...a, link: verweis(a.link) })), belege: belege(st.belege) });
   docs.push({ _id: "kontaktSeite", _type: "kontaktSeite", ...ks, belege: belege(ks.belege) });
   for (const name of ["impressum", "datenschutz"]) {
-    const { bloecke, slug: s2, ...rest } = lesen(`seiten/${name}.json`);
-    docs.push({ _id: `rechtSeite-${name}`, _type: "rechtSeite", ...rest, slug: slug(s2), inhalt: portableText(bloecke) });
+    const { bloecke, slug: s2, belege: b, ...rest } = lesen(`seiten/${name}.json`);
+    docs.push({ _id: `rechtSeite-${name}`, _type: "rechtSeite", ...rest, slug: slug(s2), inhalt: portableText(bloecke), belege: belege(b) });
   }
   for (const k of lesen("kategorien.json") as Roh[]) {
     const { slug: s2, herkunft: h, ...rest } = k;

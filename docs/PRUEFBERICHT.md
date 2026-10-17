@@ -1,17 +1,17 @@
 # Prüfbericht
 
-Stand: 17. Oktober 2026, lokaler Export vor der Veröffentlichung (Abschnitt «Live» wird nach dem Deploy ergänzt). Alle Zahlen stammen aus
-tatsächlichen Läufen; nichts ist geschätzt.
+Stand: 17. Oktober 2026, nach Veröffentlichung und Codex-Abschlussprüfung. Alle Zahlen stammen aus tatsächlichen Läufen; nichts ist geschätzt.
+Die Zahlen in Abschnitt 1 bis 3 sind die des letzten lokalen Laufs vor dem zweiten Push (nach der Abschlussprüfung).
 
 ## 1. Build und statische Prüfungen
 
 | Prüfung | Befehl | Ergebnis |
 | --- | --- | --- |
-| Inhalte (Schema, Schreibweise, Behauptungen, Links, Bilder, Quellen, Preiskennzeichen) | `npm run inhalt:pruefen` | ✓ 553 Texte, 22 Links, 5 Bilder, 18 Leistungen mit 31 Positionen, 27 Belege mit Quelle |
+| Inhalte (Schema, Schreibweise, Behauptungen, Links, Bilder, Quellen, Preiskennzeichen) | `npm run inhalt:pruefen` | ✓ 555 Texte, 22 Links, 5 Bilder, 18 Leistungen mit 31 Positionen, 29 Belege mit Quelle |
 | Lint, Typen | `npm run lint`, `npm run typecheck` | ✓ 0 Fehler, 0 Warnungen |
 | Statischer Export | `npm run build` | ✓ 16 Routen (13 HTML-Seiten, robots.txt, zwei Icons), `404.html`, `.nojekyll`, Sitemap entfernt |
-| Export (Unterpfad, noindex, fremde Hosts, Budgets, Canonical, h1, Beschreibungen) | `npm run export:pruefen` | ✓ 13 HTML-Dateien, 547 interne Verweise unter `/new-york-nails-schlieren-demo`, noindex überall, keine Sitemap, kein JSON-LD |
-| Budgets | export:pruefen | JavaScript je Seite höchstens 593 KB (Budget 625 KB, unkomprimiert; Next-Grundlast), alle Bildvarianten 71 KB, kein vorgeladenes Bild über 59 KB |
+| Export (Unterpfad, noindex, fremde Hosts, Budgets, Canonical, h1, Beschreibungen) | `npm run export:pruefen` | ✓ 13 HTML-Dateien, 560 interne Verweise unter `/new-york-nails-schlieren-demo`, noindex überall, keine Sitemap, kein JSON-LD |
+| Budgets | export:pruefen | JavaScript je Seite höchstens 594 KB (Budget 625 KB, unkomprimiert; Next-Grundlast), alle Bildvarianten 71 KB, kein vorgeladenes Bild über 59 KB |
 | Import nach Sanity (Trockenlauf) | `npm run seed -- --probe` | ✓ 30 Dokumente, 5 Bilder; jedes Dokument besteht das Domainmodell und entspricht nach dem Zurücklesen den lokalen Inhalten (inklusive Sprungmarken) |
 | Bild-Spiegel (Selbsttest ohne Sanity) | `npx tsx scripts/sanity-bilder.mts --probe …` | ✓ 2 WebP (transparentes Logo verlustfrei), nichts veröffentlicht |
 | Studio | `cd studio && npm run typecheck && npm run schema:pruefen` | ✓ Typen ok, Schema 0 Fehler, 0 Warnungen |
@@ -26,7 +26,7 @@ tatsächlichen Läufen; nichts ist geschätzt.
 | `INDEXIERUNG=1 DEPLOY_TARGET=vercel SITE_URL=https://nick8952.github.io` (Vorschau-Host) | ✓ bricht ab |
 | `INDEXIERUNG=1 DEPLOY_TARGET=vercel SITE_URL=http://www.example.com` (http) | ✓ bricht ab (neu nach Codex-Befund 13) |
 | `SITE_URL` ohne Vercel-Ziel (mit Unterpfad) | ✓ bricht ab |
-| `INDEXIERUNG=1 SITE_URL=https://www.newyorknails-schlieren.ch` (echte Domain, Inhalte nicht freigegeben) | ✓ bricht ab mit 29 offenen Punkten (Studioangaben, 4 Bereiche, 18 Leistungen, 4 Seitenbelege, Impressum, Datenschutz) |
+| `INDEXIERUNG=1 SITE_URL=https://www.newyorknails-schlieren.ch` (echte Domain, Inhalte nicht freigegeben) | ✓ bricht ab mit 31 offenen Punkten (Studioangaben, 4 Bereiche, 18 Leistungen, 6 Seitenbelege inkl. Impressum und Datenschutz, Demo-Hinweise in beiden Rechtstexten) |
 
 ## 3. Browser-Prüfungen (puppeteer-core, Chrome, lokaler Vorschau-Server)
 
@@ -141,12 +141,51 @@ Anweisung wiederholt.
 | 14 | niedrig | Hell- und Dunkelfassung als zwei eager geladene Bilder | ✓ `BildHellDunkel`: ein `<picture>` mit `media="(prefers-color-scheme: dark)"`, ein `<img>` |
 | 15 | niedrig | Spiegel lädt alle Assets; Budgets nur für AVIF | ✓ nur referenzierte Assets; WebP- und Gesamtbudget |
 
-**Abschlussprüfung:** siehe Abschnitt 9 (nach der Veröffentlichung).
+## 8. Live (GitHub Pages, 17. Oktober 2026)
 
-## 8. Live (GitHub Pages)
+Workflow-Lauf 39045795403: Job «studio» 1 min 0 s, «build» (Inhalte, Lint, Typen, Import-Trockenlauf, Build, Export-Prüfung, Browser-Prüfungen)
+2 min 50 s, «deploy» 8 s. Alle 10 Seiten per Direktaufruf 200, `/gibt-es-nicht/` 404 mit gestalteter Seite, `robots.txt` 200 ohne Sperre,
+`sitemap.xml` 404, `noindex, nofollow` und Canonical auf `https://nick8952.github.io/new-york-nails-schlieren-demo/`.
 
-Wird nach dem Deploy ergänzt.
+Browser-Prüfungen gegen die Live-Adresse: DOM-Audit 44 + 44 Prüfungen (hell, dunkel) ohne Befund, Funktionsprüfungen 71/71.
+
+| Seite | Modus | Leistung | Barrierefreiheit | Best Practices | SEO | LCP | CLS | TBT |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| / | Desktop | 100 | 100 | 100 | 66 | 0.5 s | 0 | 0 ms |
+| / | Mobil | 99 | 100 | 100 | 66 | 2.3 s | 0 | 20 ms |
+| /leistungen/ | Desktop | 100 | 100 | 100 | 66 | 0.5 s | 0 | 0 ms |
+| /leistungen/ | Mobil | 99 | 100 | 100 | 66 | 2.2 s | 0 | 30 ms |
+| /leistungen/naegel/ | Desktop | 100 | 100 | 100 | 66 | 0.5 s | 0 | 0 ms |
+| /leistungen/naegel/ | Mobil | 99 | 100 | 100 | 66 | 2.0 s | 0 | 10 ms |
+| /kontakt/ | Desktop | 100 | 100 | 100 | 66 | 0.4 s | 0 | 0 ms |
+| /kontakt/ | Mobil | 99 | 100 | 100 | 66 | 2.1 s | 0 | 10 ms |
+
+SEO 66 bleibt beabsichtigt (`noindex`, Punkt `is-crawlable`). Die Werte gelten für den Stand vor der Abschlussprüfung; die danach
+geänderten Texte und die Einwilligungskomponente ändern nichts an Grösse oder Ladeverhalten.
 
 ## 9. Codex-Abschlussprüfung
 
-Wird nach der Veröffentlichung ergänzt.
+Codex CLI, `--sandbox read-only`, nach dem ersten Push. 9 Befunde (2 hoch, 5 mittel, 2 niedrig), 15 Bereiche ohne Beanstandung,
+Gesamturteil vor der Einarbeitung: «nicht freigabefähig». Alle neun wurden umgesetzt; danach liefen alle Prüfungen erneut grün.
+
+| Nr | Schwere | Befund | Umsetzung |
+| --- | --- | --- | --- |
+| 1 | hoch | Unbelegte Aussagen: «nach drei bis vier Wochen», «fachgerecht», Gründe für Preisabweichungen, «wenige Schritte vom Bahnhof», Lumxi GmbH ohne Quelle | ✓ alle neutralisiert; Lumxi GmbH mit Quelle (Fusszeile der Buchungsseite) in den Rechtstexten und in der Inhaltsmatrix |
+| 2 | hoch | Texte versprachen freie Zeiten und Terminbestätigung | ✓ Buchungstexte sagen nur noch, dass der Knopf den externen Dienst öffnet und Behandlung und Zeit dort gewählt werden |
+| 3 | mittel | Rechtsseiten ohne `belege`; Live-Sperre nur per Stichwort | ✓ `belege` im Modell, in den Daten, im Studio-Schema, in GROQ und im Import; Sperre prüft beide Rechtsseiten (jetzt 31 Punkte); Stichwortprüfung bleibt zusätzlich |
+| 4 | mittel | Ruhende Einwilligung las trotzdem `localStorage` | ✓ zwei Komponenten: ruhend (nur Hinweisdialog, kein Speicherzugriff) und aktiv (Hook nur mit Kategorien) |
+| 5 | mittel | Buchungsregel für Bereichslinks nur im lokalen Prüfskript | ✓ `invariantenPruefen()` in `lib/content/index.ts` läuft im Build für lokale und Sanity-Inhalte (Buchungsknopf = Buchungsadresse, Bereichslinks beginnen mit ihr) |
+| 6 | mittel | Inhaltsprüfung prüfte immer die JSON-Dateien | ✓ prüft die konfigurierte Quelle (`CONTENT_SOURCE`); Bildprüfungen nur lokal |
+| 7 | mittel | Pflicht-Objekte im Studio nicht `required` | ✓ Adresse, Buchung, Kopfzeile, Leiste, Fusszeile, UI, Formular, Einwilligung, SEO, Einstieg und Abschnitte `required` |
+| 8 | niedrig | Inline-Links ohne zentrale Linkregel | ✓ `LINKZIEL` im Inline-Schema, `linkzielErlaubt` an der Sanity-Annotation |
+| 9 | niedrig | Zwei Originalbezeichnungen mit doppeltem Leerzeichen weichen von der Matrix ab | ✓ Matrix nennt die doppelten Leerzeichen (JSON ist wörtlich, Quelle enthält sie) |
+
+Prüfstatus laut Codex: Lint, Typen, Inhaltsprüfung, Trockenlauf und Export-Prüfung bestanden; `npm run build` konnte in der
+read-only-Sandbox nicht laufen (`tsx` ohne Schreibrecht für ein temporäres Socket), kein Projektfehler.
+
+## 10. Nicht durchführbar
+
+- Test mit echten Geräten und Screenreader (VoiceOver, TalkBack).
+- Echter Sanity-Import, Build mit `CONTENT_SOURCE=sanity`, Webhook: Es existiert kein Projekt (Vorgabe des Auftraggebers).
+- Abgleich mit dem Google-Maps-Profil (nicht abrufbar).
+- Facebook-Seite (ohne Anmeldung nicht erreichbar).

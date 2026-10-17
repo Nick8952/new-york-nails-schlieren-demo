@@ -19,7 +19,7 @@
       "titel": "Inhalte und Preise"
     },
     "Leistungen, Preise, Behandlungsdauern und Öffnungszeiten wurden am 16. Oktober 2026 von der Buchungsseite des Studios bei Beauty Booking übernommen. Massgebend sind die Angaben des Studios und der Buchungsseite. Diese Website und die Buchungsplattform sind getrennte Systeme: Änderungen auf der einen Seite erscheinen nicht automatisch auf der anderen.",
-    "Die Website nimmt keine Buchungen entgegen. Termine werden ausschliesslich beim externen Buchungsdienst Beauty Booking (Lumxi GmbH) oder telefonisch vereinbart.",
+    "Die Website nimmt keine Buchungen entgegen. Termine werden ausschliesslich beim externen Buchungsdienst Beauty Booking (beprobooking.com; laut Fusszeile der Buchungsseite betrieben von der Lumxi GmbH) oder telefonisch vereinbart.",
     {
       "titel": "Marken und Logos"
     },
@@ -38,5 +38,16 @@
     "Die Demo ist eine statische Website und wird über GitHub Pages ausgeliefert (GitHub, Inc., San Francisco, USA). Sie ist für Suchmaschinen gesperrt (noindex) und als Entwurf gekennzeichnet."
   ],
   "seoTitel": "Impressum",
-  "seoBeschreibung": "Impressum der Verkaufs-Demo für New York Nails Schlieren: Betreiber der Demo, dargestelltes Studio, Quellen der Inhalte, Marken und Bildnachweis."
+  "seoBeschreibung": "Impressum der Verkaufs-Demo für New York Nails Schlieren: Betreiber der Demo, dargestelltes Studio, Quellen der Inhalte, Marken und Bildnachweis.",
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Angaben des Demo-Betreibers (Nick Holzbecher) und Kontaktdaten des Studios von dessen Website",
+        "url": "https://newyorknails-schlieren.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      }
+    ],
+    "freigabe": "demo"
+  }
 }

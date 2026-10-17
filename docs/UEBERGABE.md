@@ -73,6 +73,6 @@ Stand: 17. Oktober 2026. Arbeitspapier für das Gespräch mit New York Nails Sch
 `npm run inhalt:pruefen -- --live` listet alles, was noch nicht freigegeben ist. Der Build bricht mit `INDEXIERUNG=1` auf einer echten
 Domain ab, solange Punkte offen sind:
 
-- 18 Leistungen (`freigabe: "demo"` → `"live"` nach Bestätigung der Preise)
-- Belege der Startseite, der Leistungsseite und der Studioseite
-- Impressum und Datenschutzerklärung beschreiben noch die Demo (Betreiber Nick, GitHub Pages)
+- Studioangaben (`einstellungen.freigabe`), 4 Bereiche und 18 Leistungen (`freigabe: "demo"` → `"live"` nach Bestätigung)
+- Belege der Startseite, der Leistungsseite, der Studioseite, der Kontaktseite, des Impressums und der Datenschutzerklärung
+- Impressum und Datenschutzerklärung beschreiben noch die Demo (Betreiber Nick, GitHub Pages); zusammen 31 Punkte

@@ -1,5 +1,5 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
-import { freigabeFeld, schreibweise, seoFelder, seoGruppe, text } from "./objekte";
+import { freigabeFeld, linkzielErlaubt, schreibweise, seoFelder, seoGruppe, text } from "./objekte";
 
 const reihenfolge = defineField({ name: "reihenfolge", title: "Reihenfolge", type: "number", description: "Kleinere Zahlen stehen weiter vorne (10, 20, 30 lässt Platz für Einschübe).", initialValue: 100, validation: (r) => r.required() });
 const slug = (quelle: string) =>
@@ -18,7 +18,7 @@ export const einstellungen = defineType({
     defineField({ name: "claim", title: "Leitzeile", type: "string", description: "Steht im Logo: «Nails, Lashes & Beauty Care».", group: "studio", validation: (r) => r.required().custom(schreibweise) }),
     defineField({ name: "rechtstraeger", title: "Rechtsträger (optional)", type: "string", description: "Firma oder Inhaberin/Inhaber mit Rechtsform, so wie es im Impressum stehen soll. Leer lassen, solange nicht bestätigt.", group: "studio" }),
     defineField({
-      name: "adresse", title: "Adresse", type: "object", group: "kontakt",
+      name: "adresse", title: "Adresse", type: "object", group: "kontakt", validation: (r) => r.required(),
       fields: [
         defineField({ name: "strasse", title: "Strasse und Nummer", type: "string", validation: (r) => r.required() }),
         defineField({ name: "plz", title: "Postleitzahl", type: "string", validation: (r) => r.required().regex(/^\d{4}$/, { name: "vierstellige Postleitzahl" }) }),
@@ -29,7 +29,7 @@ export const einstellungen = defineType({
     defineField({ name: "telefon", title: "Telefon", type: "string", description: "Im internationalen Format: +41 44 557 50 67. Die Website zeigt daraus «044 557 50 67».", group: "kontakt", validation: (r) => r.required().regex(/^\+41 \d{2} \d{3} \d{2} \d{2}$/, { name: "Format +41 44 123 45 67" }) }),
     defineField({ name: "email", title: "E-Mail", type: "string", description: "An diese Adresse richtet das Kontaktformular die vorbereitete E-Mail.", group: "kontakt", validation: (r) => r.required().email() }),
     defineField({
-      name: "buchung", title: "Online-Buchung", type: "object", group: "kontakt",
+      name: "buchung", title: "Online-Buchung", type: "object", group: "kontakt", validation: (r) => r.required(),
       description: "Die Website verlinkt die Buchungsseite. Preise und Leistungen dort müssen separat gepflegt werden; die Website gleicht nichts automatisch ab.",
       fields: [
         defineField({ name: "url", title: "Adresse der Buchungsseite", type: "url", validation: (r) => r.required().uri({ scheme: ["https"] }) }),
@@ -159,15 +159,15 @@ export const texte = defineType({
     defineField({ name: "demoHinweis", title: "Hinweis «Entwurf»", type: "string", description: "Schmale Zeile über der Kopfzeile. Sie erscheint nur, solange die Website nicht für Suchmaschinen freigegeben ist.", group: "navigation" }),
     defineField({ name: "navigation", title: "Seiten in der Navigation", type: "array", of: [defineArrayMember({ type: "verweis" })], group: "navigation", validation: (r) => r.required().min(1).max(5) }),
     defineField({
-      name: "kopf", title: "Kopfzeile", type: "object", group: "navigation",
+      name: "kopf", title: "Kopfzeile", type: "object", group: "navigation", validation: (r) => r.required(),
       fields: [
         defineField({ name: "buchen", title: "Knopf «Termin buchen»", type: "verweis", description: "Der eine Aufruf der Website. Alle Buchungsknöpfe heissen gleich und führen zur Buchungsseite.", validation: (r) => r.required() }),
         text("anrufen", "Beschriftung «Anrufen»"), text("menueKnopf", "Knopf «Menü»"), text("menueTitel", "Titel des Menüs"), text("schliessen", "Knopf «Schliessen»"), text("telefonLabel", "Beschriftung des Telefon-Links (für Screenreader)"),
       ],
     }),
-    defineField({ name: "leiste", title: "Mobile Kontaktleiste", type: "object", group: "navigation", fields: [text("buchen", "Knopf «Termin buchen»"), text("anrufen", "Knopf «Anrufen»")] }),
+    defineField({ name: "leiste", title: "Mobile Kontaktleiste", type: "object", group: "navigation", validation: (r) => r.required(), fields: [text("buchen", "Knopf «Termin buchen»"), text("anrufen", "Knopf «Anrufen»")] }),
     defineField({
-      name: "footer", title: "Fusszeile", type: "object", group: "fuss",
+      name: "footer", title: "Fusszeile", type: "object", group: "fuss", validation: (r) => r.required(),
       fields: [
         text("leitsatz", "Leitsatz"), text("kontaktTitel", "Titel «Kontakt»"), text("zeitenTitel", "Titel «Öffnungszeiten»"), text("seitenTitel", "Titel «Seiten»"), text("rechtlichesTitel", "Titel «Rechtliches»"),
         defineField({ name: "rechtliches", title: "Rechtliche Seiten", type: "array", of: [defineArrayMember({ type: "verweis" })], validation: (r) => r.required().min(1) }),
@@ -177,7 +177,7 @@ export const texte = defineType({
       ],
     }),
     defineField({
-      name: "ui", title: "Kleine Texte", type: "object", group: "ui",
+      name: "ui", title: "Kleine Texte", type: "object", group: "ui", validation: (r) => r.required(),
       fields: [
         text("zumInhalt", "Sprunglink"), text("symbolbild", "Kennzeichnung von Symbolbildern"), text("telefon", "«Telefon»"), text("email", "«E-Mail»"), text("adresse", "«Adresse»"),
         text("buchungExtern", "Hinweis für Screenreader bei Buchungsknöpfen"), text("tour", "Link «360°-Ansicht»"), text("karte", "Link «Route»"),
@@ -190,7 +190,7 @@ export const texte = defineType({
       ],
     }),
     defineField({
-      name: "formular", title: "Kontaktformular", type: "object", group: "formular",
+      name: "formular", title: "Kontaktformular", type: "object", group: "formular", validation: (r) => r.required(),
       description: "Das Formular versendet nichts. Es bereitet eine E-Mail im E-Mail-Programm der Besucherin oder des Besuchers vor. Die Texte müssen das ehrlich sagen. Es ist keine Terminbuchung.",
       fields: [
         text("titel", "Titel"), text("einleitung", "Einleitung", "Muss erklären, dass sich das E-Mail-Programm öffnet, die Website nichts sendet und Termine online gebucht werden.", 3),
@@ -205,7 +205,7 @@ export const texte = defineType({
       ],
     }),
     defineField({
-      name: "einwilligung", title: "Datenschutz-Einstellungen", type: "object", group: "einwilligung",
+      name: "einwilligung", title: "Datenschutz-Einstellungen", type: "object", group: "einwilligung", validation: (r) => r.required(),
       description: "Solange keine Kategorie eingetragen ist, erscheint kein Banner. Eine Kategorie nur eintragen, wenn die Website tatsächlich einen einwilligungspflichtigen Dienst einbindet (das braucht eine Entwicklerin oder einen Entwickler).",
       fields: [
         text("fussLink", "Link in der Fusszeile"), text("ruhendTitel", "Titel, wenn nichts einzustellen ist"), text("ruhendText", "Text, wenn nichts einzustellen ist", undefined, 3),
@@ -214,14 +214,14 @@ export const texte = defineType({
         defineField({ name: "kategorien", title: "Optionale Kategorien", type: "array", of: [defineArrayMember({ type: "object", name: "einwilligungKategorie", fields: [defineField({ name: "kennung", title: "Kennung (Kleinbuchstaben)", type: "string", validation: (r) => r.required().regex(/^[a-z]+$/, { name: "nur Kleinbuchstaben" }) }), defineField({ name: "titel", title: "Titel", type: "string", validation: (r) => r.required() }), defineField({ name: "beschreibung", title: "Beschreibung", type: "text", rows: 2, validation: (r) => r.required() })], preview: { select: { title: "titel", subtitle: "kennung" } } })] }),
       ],
     }),
-    defineField({ name: "seo", title: "Suchmaschinen (Standard)", type: "object", group: "seo", fields: [text("titelZusatz", "Zusatz im Seitentitel", "Wird an jeden Seitentitel angehängt, zum Beispiel «New York Nails Schlieren»."), text("beschreibung", "Standardbeschreibung", "Gilt für Seiten ohne eigene Beschreibung.", 3)] }),
+    defineField({ name: "seo", title: "Suchmaschinen (Standard)", type: "object", group: "seo", validation: (r) => r.required(), fields: [text("titelZusatz", "Zusatz im Seitentitel", "Wird an jeden Seitentitel angehängt, zum Beispiel «New York Nails Schlieren»."), text("beschreibung", "Standardbeschreibung", "Gilt für Seiten ohne eigene Beschreibung.", 3)] }),
   ],
   preview: { prepare: () => ({ title: "Navigation, Fusszeile und Formulartexte" }) },
 });
 
 // ── Seiten ─────────────────────────────────────────────────────────────────
 const abschnittText = (name: string, title: string, mitLink = false) =>
-  defineField({ name, title, type: "object", group: "inhalt", fields: [text("titel", "Titel"), text("text", "Text", undefined, 3), ...(mitLink ? [defineField({ name: "link", title: "Link", type: "verweis", validation: (r) => r.required() })] : [])] });
+  defineField({ name, title, type: "object", group: "inhalt", validation: (r) => r.required(), fields: [text("titel", "Titel"), text("text", "Text", undefined, 3), ...(mitLink ? [defineField({ name: "link", title: "Link", type: "verweis", validation: (r) => r.required() })] : [])] });
 const belegeFeld = defineField({ name: "belege", title: "Belege für die Texte dieser Seite", type: "belege", group: "inhalt", validation: (r) => r.required() });
 
 export const startseite = defineType({
@@ -231,7 +231,7 @@ export const startseite = defineType({
   groups: seoGruppe,
   fields: [
     defineField({
-      name: "hero", title: "Einstieg", type: "object", group: "inhalt",
+      name: "hero", title: "Einstieg", type: "object", group: "inhalt", validation: (r) => r.required(),
       fields: [
         text("ueberzeile", "Überzeile", "Zum Beispiel die Adresse. Kurz."),
         text("titel", "Titel", "Höchstens zwei Zeilen."),
@@ -323,9 +323,10 @@ export const rechtSeite = defineType({
     { ...text("stand", "Stand", "Zum Beispiel «16. Oktober 2026»"), group: "inhalt" },
     defineField({
       name: "inhalt", title: "Inhalt", type: "array", group: "inhalt",
-      of: [defineArrayMember({ type: "block", styles: [{ title: "Absatz", value: "normal" }, { title: "Zwischentitel", value: "h2" }, { title: "Untertitel", value: "h3" }], lists: [{ title: "Aufzählung", value: "bullet" }], marks: { decorators: [{ title: "Fett", value: "strong" }], annotations: [{ name: "link", type: "object", title: "Link", fields: [defineField({ name: "href", title: "Ziel", type: "string", validation: (r) => r.required() })] }] } })],
+      of: [defineArrayMember({ type: "block", styles: [{ title: "Absatz", value: "normal" }, { title: "Zwischentitel", value: "h2" }, { title: "Untertitel", value: "h3" }], lists: [{ title: "Aufzählung", value: "bullet" }], marks: { decorators: [{ title: "Fett", value: "strong" }], annotations: [{ name: "link", type: "object", title: "Link", fields: [defineField({ name: "href", title: "Ziel", type: "string", description: "Interne Seite («/kontakt/»), https://-Adresse, mailto: oder tel:", validation: (r) => r.required().custom(linkzielErlaubt) })] }] } })],
       validation: (r) => r.required().min(1),
     }),
+    belegeFeld,
     ...seoFelder,
   ],
   preview: { select: { title: "titel", subtitle: "stand" } },

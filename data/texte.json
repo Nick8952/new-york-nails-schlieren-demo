@@ -1,19 +1,34 @@
 {
   "demoHinweis": "Entwurf: Dies ist eine Verkaufs-Demo und nicht die offizielle Website von New York Nails Schlieren.",
   "navigation": [
-    { "text": "Leistungen und Preise", "ziel": "/leistungen/" },
-    { "text": "Studio", "ziel": "/studio/" },
-    { "text": "Kontakt", "ziel": "/kontakt/" }
+    {
+      "text": "Leistungen und Preise",
+      "ziel": "/leistungen/"
+    },
+    {
+      "text": "Studio",
+      "ziel": "/studio/"
+    },
+    {
+      "text": "Kontakt",
+      "ziel": "/kontakt/"
+    }
   ],
   "kopf": {
-    "buchen": { "text": "Termin buchen", "ziel": "https://beprobooking.com/salon/new-york-nails-schlieren" },
+    "buchen": {
+      "text": "Termin buchen",
+      "ziel": "https://beprobooking.com/salon/new-york-nails-schlieren"
+    },
     "anrufen": "Anrufen",
     "menueKnopf": "Menü",
     "menueTitel": "Menü",
     "schliessen": "Schliessen",
     "telefonLabel": "Anrufen"
   },
-  "leiste": { "buchen": "Termin buchen", "anrufen": "Anrufen" },
+  "leiste": {
+    "buchen": "Termin buchen",
+    "anrufen": "Anrufen"
+  },
   "footer": {
     "leitsatz": "Nails, Lashes & Beauty Care in Schlieren.",
     "kontaktTitel": "Kontakt",
@@ -21,12 +36,21 @@
     "seitenTitel": "Seiten",
     "rechtlichesTitel": "Rechtliches",
     "rechtliches": [
-      { "text": "Impressum", "ziel": "/impressum/" },
-      { "text": "Datenschutzerklärung", "ziel": "/datenschutz/" }
+      {
+        "text": "Impressum",
+        "ziel": "/impressum/"
+      },
+      {
+        "text": "Datenschutzerklärung",
+        "ziel": "/datenschutz/"
+      }
     ],
     "route": "Route in Google Maps",
     "folgen": "Folgen Sie uns",
-    "bildnachweis": { "text": "Bildnachweis", "ziel": "/impressum/#bildnachweis" },
+    "bildnachweis": {
+      "text": "Bildnachweis",
+      "ziel": "/impressum/#bildnachweis"
+    },
     "copyright": "New York Nails Schlieren",
     "demoHinweis": "Entwurf einer neuen Website für New York Nails Schlieren. Betreiber dieser Demo ist Nick Holzbecher (siehe Impressum). Es ist nicht die offizielle Website des Studios."
   },
@@ -59,7 +83,10 @@
     "sonderzeitenTitel": "Abweichende Zeiten",
     "nichtGefundenTitel": "Diese Seite gibt es nicht",
     "nichtGefundenText": "Die Adresse ist falsch geschrieben oder die Seite wurde verschoben. Die Leistungen und Preise sowie den Kontakt finden Sie über das Menü.",
-    "nichtGefundenLink": { "text": "Zur Startseite", "ziel": "/" }
+    "nichtGefundenLink": {
+      "text": "Zur Startseite",
+      "ziel": "/"
+    }
   },
   "formular": {
     "titel": "Nachricht ans Studio",
@@ -68,15 +95,27 @@
     "email": "Ihre E-Mail-Adresse",
     "betreff": "Betreff",
     "betreffOptionen": [
-      { "wert": "frage", "titel": "Frage zu einer Behandlung" },
-      { "wert": "gutschein", "titel": "Gutschein" },
-      { "wert": "sonstiges", "titel": "Sonstiges" }
+      {
+        "wert": "frage",
+        "titel": "Frage zu einer Behandlung"
+      },
+      {
+        "wert": "gutschein",
+        "titel": "Gutschein"
+      },
+      {
+        "wert": "sonstiges",
+        "titel": "Sonstiges"
+      }
     ],
     "nachricht": "Nachricht",
     "nachrichtHilfe": "Bitte keine Gesundheitsangaben in die Nachricht schreiben.",
     "pflicht": "Pflichtfelder sind mit * gekennzeichnet.",
     "datenschutzHinweis": "Hinweise zum Umgang mit Ihren Angaben stehen in der",
-    "datenschutzLink": { "text": "Datenschutzerklärung", "ziel": "/datenschutz/" },
+    "datenschutzLink": {
+      "text": "Datenschutzerklärung",
+      "ziel": "/datenschutz/"
+    },
     "absenden": "E-Mail vorbereiten",
     "hinweisNachher": "Ihr E-Mail-Programm sollte sich jetzt mit der vorbereiteten Nachricht öffnen. Bitte prüfen und dort senden. Öffnet sich nichts, kopieren Sie die Nachricht und senden sie an",
     "kopieren": "Nachricht kopieren",

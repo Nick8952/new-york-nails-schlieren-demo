@@ -30,7 +30,7 @@
   },
   "studio": {
     "titel": "Das Studio an der Ringstrasse",
-    "text": "Nagelstudio mit Nageldesign, Wimpern, Waxing und Massage, gleich beim Bahnhof Schlieren. In der 360°-Ansicht sehen Sie sich im Studio um, bevor Sie kommen.",
+    "text": "Nagelstudio mit Nageldesign, Wimpern, Waxing und Massage an der Ringstrasse 1. In der 360°-Ansicht sehen Sie sich im Studio um, bevor Sie kommen.",
     "link": {
       "text": "Studio entdecken",
       "ziel": "/studio/"
@@ -42,7 +42,7 @@
   },
   "buchung": {
     "titel": "Termin buchen",
-    "text": "Behandlung wählen, Zeit wählen, fertig. Die Buchung läuft über Beauty Booking, den Buchungsdienst des Studios."
+    "text": "Behandlung und Zeit wählen Sie bei Beauty Booking, dem Buchungsdienst des Studios. Die Buchung läuft vollständig dort."
   },
   "kontakt": {
     "titel": "Kontakt und Anfahrt",

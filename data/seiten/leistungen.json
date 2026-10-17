@@ -2,12 +2,17 @@
   "titel": "Leistungen und Preise",
   "einleitung": "Alle Behandlungen mit Preis und Dauer, so wie sie online buchbar sind. Wählen Sie einen Bereich oder lesen Sie die ganze Liste.",
   "preisHinweisTitel": "So lesen Sie die Preise",
-  "preisHinweis": "Preise in Schweizer Franken, Dauer in Minuten. «Je nach Aufwand» heisst: Der Preis kann abweichen, zum Beispiel bei besonders langen Nägeln oder aufwendigen Designs. «ab» kennzeichnet einen Mindestpreis. Verbindlich ist der Preis, den Ihnen das Studio nennt.",
+  "preisHinweis": "Preise in Schweizer Franken, Dauer in Minuten. «Je nach Aufwand» heisst: Der Preis kann abweichen; die Buchungsplattform nennt das «Preisabweichung je Bedarf». «ab» kennzeichnet einen Mindestpreis. Verbindlich ist der Preis, den Ihnen das Studio nennt.",
   "buchungTitel": "Online buchen",
-  "buchungText": "Jede Position lässt sich bei Beauty Booking buchen: Behandlung wählen, Zeit wählen, Angaben eintragen. Die Buchung läuft bei diesem externen Dienst, nicht auf dieser Website.",
+  "buchungText": "Jede Position lässt sich bei Beauty Booking buchen, dem externen Buchungsdienst des Studios. Behandlung und Zeit wählen Sie dort; diese Website nimmt keine Buchungen entgegen.",
   "belege": {
     "herkunft": [
-      { "quelle": "Buchungsseite des Studios bei Beauty Booking (alle Leistungen, Preise, Dauern)", "url": "https://beprobooking.com/salon/new-york-nails-schlieren", "abgerufen": "2026-10-16", "art": "buchungsplattform" }
+      {
+        "quelle": "Buchungsseite des Studios bei Beauty Booking (alle Leistungen, Preise, Dauern)",
+        "url": "https://beprobooking.com/salon/new-york-nails-schlieren",
+        "abgerufen": "2026-10-16",
+        "art": "buchungsplattform"
+      }
     ],
     "freigabe": "demo"
   },

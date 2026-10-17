@@ -48,7 +48,7 @@ const ABFRAGEN = {
   leistungenSeite: `*[_type == "leistungenSeite"][0]{ titel, einleitung, preisHinweisTitel, preisHinweis, buchungTitel, buchungText, ${BELEGE}, seoTitel, seoBeschreibung }`,
   studioSeite: `*[_type == "studioSeite"][0]{ titel, einleitung, abschnitte[]{ _key, titel, text, link }, tourTitel, tourText, galerieTitel, galerieText, teamTitel, fragenTitel, ${BELEGE}, seoTitel, seoBeschreibung }`,
   kontaktSeite: `*[_type == "kontaktSeite"][0]{ titel, einleitung, buchungTitel, buchungText, direktTitel, anfahrtTitel, anfahrtText, zeitenTitel, ${BELEGE}, seoTitel, seoBeschreibung }`,
-  rechtSeite: `*[_type == "rechtSeite" && slug.current == $slug][0]{ "slug": slug.current, titel, einleitung, stand, inhalt, seoTitel, seoBeschreibung }`,
+  rechtSeite: `*[_type == "rechtSeite" && slug.current == $slug][0]{ "slug": slug.current, titel, einleitung, stand, inhalt, ${BELEGE}, seoTitel, seoBeschreibung }`,
   galerie: `*[_type == "galerieBild"] | order(reihenfolge asc){ "_key": _id, titel, "bild": bild${BILD}, "leistung": leistung->slug.current, ${HERKUNFT}, freigabe }`,
   team: `*[_type == "teamMitglied"] | order(reihenfolge asc){ "_key": _id, name, rolle, text, "bild": bild${BILD}, ${HERKUNFT}, freigabe }`,
   fragen: `*[_type == "frage"] | order(reihenfolge asc){ "_key": _id, frage, antwort, ${HERKUNFT}, freigabe }`,
